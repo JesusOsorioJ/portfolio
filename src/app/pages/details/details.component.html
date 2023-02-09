@@ -1,0 +1,129 @@
+<div class="bg-white">
+    <div class="pt-6">
+      <div class="px-6 pt-6 lg:px-8">
+        <nav class="flex flex-row-reverse items-center justify-between" aria-label="Global">
+          <div class="flex lg:hidden">
+            <button  (click)="AddData()"  type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span  class="sr-only">Open main menu</span>
+              <!-- Heroicon name: outline/bars-3 -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="no-underline text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+    
+            <a href="#proyectos" class="no-underline text-sm font-semibold leading-6 text-gray-900">Mis proyectos</a>
+    
+            <a href="#contacto" class="no-underline text-sm font-semibold leading-6 text-gray-900">Contacto</a>
+    
+          </div>
+          
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div role="dialog"  aria-modal="true">
+          <div focus="true" *ngIf="show" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+              </a>
+              <button (click)="AddData()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only" >Close menu</span>
+                <!-- Heroicon name: outline/x-mark -->
+                <svg   class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path  stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="" class="no-underline -mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Inicio</a>
+    
+                  <a href="#proyectos" class="no-underline -mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Mis proyecto</a>
+    
+                  <a href="#contacto" class="no-underline -mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Contacto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- Product info -->
+<div class="mx-auto max-w-2xl px-15 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:gap-x-8 lg:px-15 ">
+<div class="lg:col-span-2  lg:pr-8">
+<h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{data[step].name}}</h1>
+</div>
+
+<!-- Options -->
+<div class="mt-4 lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
+  <ngb-carousel class="bg-black">
+    <ng-template *ngFor="let foto of data[step].imageswebpages" ngbSlide >
+        <div class="picsum-img-wrapper">
+            <img src="../../../assets/photo/{{data[step].url}}/{{foto.name}}.png" alt="Random first slide" />
+        </div>
+        <div class="carousel-caption">
+          <p class="bg-white rounded-md w-auto text-black font-bold">{{foto.des}}</p>
+       
+         </div>
+    </ng-template>
+</ngb-carousel>
+
+<div class="flex flex-row gap-x-12">
+
+  <a href="{{data[step].webpage}}" class=" no-underline mt-10 flex-3 w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Ir a pagina</a>
+  <a href="{{data[step].frontend}}" class="no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Frontend</a>
+<a href="{{data[step].backend}}" class="no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Backend</a>
+</div>
+</div>
+
+<div class="py-10 lg:col-span-1 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8">
+<!-- Description and details -->
+<div>
+<div class="space-y-6">
+  <p class="text-sm text-gray-900">{{data[step].descripcion}}</p>
+</div>
+</div>
+<div class="mt-10">
+  <h2 class="text-sm font-medium text-gray-900">Frontend</h2>
+  <div class="flex flex-row">
+     <img *ngFor="let util of data[step].herramientas.front" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
+  </div>
+  </div>
+  <div class="flex flex-row">
+  <div class="mt-10">
+    <h2 class="text-sm font-medium text-gray-900">Backend</h2>
+    <div class="flex flex-row">
+       <img *ngFor="let util of data[step].herramientas.back" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
+    </div>
+    </div>
+  
+    <div class=" ml-10 mt-10">
+      <h2 class="text-sm font-medium text-gray-900">Base de datos</h2>
+      <div class="flex flex-row">
+         <img *ngFor="let util of data[step].herramientas.database" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-8 w-auto sm:h-10" src="../../../assets/icons/{{util}}.JPG" alt="">
+      </div>
+      </div>
+    </div>
+
+<div class="mt-10">
+<h3 class="text-sm font-medium text-gray-900">Utilidades</h3>
+
+<div class="mt-4">
+  <ul  role="list" class="list-disc space-y-2 pl-4 text-sm">
+    <li *ngFor="let util of data[step].Utilidades" class="text-gray-400"><span class="text-gray-600">{{util}}</span></li>
+  </ul>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,102 @@
+<div class="snap-y scroll-smooth  lg:h-screen lg:overflow-scroll scroll-bar ">
+<div class="h-screen snap-start isolate bg-white">
+  <div class="px-6 pt-6 lg:px-8">
+    <nav class="flex flex-row-reverse items-center justify-between" aria-label="Global">
+      <div class="flex lg:hidden">
+        <button  (click)="AddData()"  type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span  class="sr-only">Open main menu</span>
+          <!-- Heroicon name: outline/bars-3 -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+
+        <a href="#proyectos" class="text-sm font-semibold leading-6 text-gray-900">Mis proyectos</a>
+
+        <a href="#contacto" class="text-sm font-semibold leading-6 text-gray-900">Contacto</a>
+
+      </div>
+      
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div role="dialog"  aria-modal="true">
+      <div focus="true" *ngIf="show" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+          </a>
+          <button (click)="AddData()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <span class="sr-only" >Close menu</span>
+            <!-- Heroicon name: outline/x-mark -->
+            <svg   class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path  stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a href="" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Inicio</a>
+
+              <a href="#proyectos" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Mis proyecto</a>
+
+              <a href="#contacto" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="relative sm:py-16 px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl py-20 sm:py-20 lg:py-20">
+        <div class="text-center">
+          <p class="mt-6 text-base font-mono text-blue-600/100 leading-8 text-gray-450">Hola, mi nombre es</p>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Jesus Osorio,</h1>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Soy un programador FullStack con Enfasis en el Stack Mern (MongoDB, Express.js, React.js y Node.js) con aptitud de aprender nuevas tecnologias.
+             Conoce mis proyectos dando click debajo o en la parte superior.
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#proyectos" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Mis proyectos</a>
+            <a href="#contacto" class="text-base font-semibold leading-7 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+</div>
+<div  id="proyectos" class="lg:h-screen scroll-smooth snap-start bg-gray-100">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:max-w-none lg:py-10">
+      <h2 class="text-2xl font-bold text-gray-900">Mis proyectos</h2>
+
+      <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+        <div  *ngFor="let date of data" class="group relative">
+          <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+            <img src="../../../assets/photo/{{date.url}}/{{date.imageswebpages[0].name}}.png" class="h-full w-full object-cover object-center">
+          </div>
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="details/{{date.url}}">
+              <span class="absolute inset-0"></span>
+              {{date.name}}
+            </a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">
+            {{date.webpage}}</p>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contacto" class="lg:h-screen scroll-smooth snap-start bg-gray-100">
+  <app-footer></app-footer>
+</div>
+</div>
