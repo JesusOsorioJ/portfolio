@@ -1,4 +1,4 @@
-<div class="bg-white">
+<div class="mx-10 lg:mx-0 bg-white">
     <div class="pt-6">
       <div class="px-6 pt-6 lg:px-8">
         <nav class="flex flex-row-reverse items-center justify-between" aria-label="Global">
@@ -62,7 +62,7 @@
 </div>
 
 <!-- Options -->
-<div class="mt-4 lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
+<div class="mt-4   lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
   <ngb-carousel class="bg-black">
     <ng-template *ngFor="let foto of data[step].imageswebpages" ngbSlide >
         <div class="picsum-img-wrapper">
@@ -75,11 +75,11 @@
     </ng-template>
 </ngb-carousel>
 
-<div class="flex flex-row gap-x-12">
+<div class="flex flex-row flex-wrap gap-x-12">
 
-  <a href="{{data[step].webpage}}" class=" no-underline mt-10 flex-3 w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Ir a pagina</a>
-  <a href="{{data[step].frontend}}" class="no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Frontend</a>
-<a *ngIf="data[step].backend!=null" href="{{data[step].backend}}" class="no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Backend</a>
+  <a href="{{data[step].webpage}}" class=" max-w-fit no-underline mt-10 flex-3 w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Ir a pagina web</a>
+  <a href="{{data[step].frontend}}" class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Frontend</a>
+<a *ngIf="data[step].backend!=null" href="{{data[step].backend}}" class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Backend</a>
 </div>
 </div>
 

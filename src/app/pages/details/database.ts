@@ -7,7 +7,7 @@ export var databases = [
         herramientas:{ front:["javascript","react","sass","redux","socket"],
                        back:["node","sendgrid","cloudinary","stripe"],
                        database:["mongodb"]},
-        descripcion:"Pagina para intermediaria entre profesionales especialidades y clientes, en labores electricas, plomeria, mecanico, entre otras.​",
+        descripcion:"Pagina para intermediar entre profesionales especialidades y clientes, en labores electricas, plomeria, mecanico, entre otras.​",
         Utilidades:[
           "Inicio de sesion con encriptacion (jwt)",
           "Envio de correo de autenticacion de usuario",
@@ -35,7 +35,7 @@ export var databases = [
                        back:[""],
                        database:["firebase","fbauthentication"]},
         descripcion:"Mi app es una pagina que ofrece a los estudiantes y profesores una herramienta para poder hacer test en línea. La plataforma permite la gestión de cursos y test de forma simultanea",
-        Utilidades:["Inicio de sesion con encriptacion",
+        Utilidades:["Inicio de sesion con encriptacion (jwt)",
         "creacin y gestion de test en linea",
         "creacion y gestion de curso en linea",
         "Posibilidad de gestionar test en vivo o con tiempo"
