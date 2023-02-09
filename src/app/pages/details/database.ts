@@ -4,6 +4,11 @@ export var databases = [
           no : 0,
           name:"Quick call",
           url:"quickcall",
+          Integrantes:[
+            {rol:"Desarollador",name:"Luis Alberto Salas",linkedin:"https://www.linkedin.com/in/luis-salcedo-salas/"},
+            {rol:"Desarollador",name:"Francisco Huertas Cruz",linkedin:"https://www.linkedin.com/in/francisco-huertas-cruz/"},
+            {rol:"Desarollador",name:"Jesus Osorio jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+          ],
         herramientas:{ front:["javascript","react","sass","redux","socket"],
                        back:["node","sendgrid","cloudinary","stripe"],
                        database:["mongodb"]},
@@ -32,6 +37,9 @@ export var databases = [
         no : 1,
         name:"Mi app",
         url:"miapp",
+        Integrantes:[
+          {rol:"Desarollador",name:"Jesus Osorio jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"}
+        ],
         herramientas:{ front:["javascript","react","sass","redux","reactrouter"],
                        back:[""],
                        database:["firebase","fbauthentication"]},

@@ -91,30 +91,42 @@
 </div>
 </div>
 
-  <div class="flex flex-row flex-wrap">
-    <div class="mt-10">
+<div class="mt-4">
+  <h3 class="text-sm font-medium text-gray-900">Integrantes</h3>
+  
+  <div class="mt-1">
+    <ul  role="list" class="list-disc space-y-2 pl-4 text-sm">
+      <li *ngFor="let util of data[step].Integrantes" class="text-gray-400">
+        <span class="text-gray-600">{{util.rol}} : </span>
+        <a href="{{util.linkedin}}" class="no-underline text-gray-600">{{util.name}}</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <div class=" mt-4 flex flex-row flex-wrap">
+    <div >
       <h2 class="text-sm font-medium text-gray-900">Frontend</h2>
       <div class="flex flex-row">
          <img *ngFor="let util of data[step].herramientas.front" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
       </div>
       </div> 
 
-  <div *ngIf="(data[step].herramientas.back[0]).length!=0" class="mt-10 ">
+  <div *ngIf="(data[step].herramientas.back[0]).length!=0" >
     <h2 class="text-sm  font-medium text-gray-900">Backend</h2>
     <div class="flex flex-row">
        <img *ngFor="let util of data[step].herramientas.back" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
     </div>
     
     </div>
-    <div class="mt-10">
+    <div >
       <h2 class="text-sm font-medium text-gray-900">DB</h2>
       <div class="flex flex-row">
-         <img *ngFor="let util of data[step].herramientas.database" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-8 w-auto sm:h-10" src="../../../assets/icons/{{util}}.JPG" alt="">
+         <img *ngFor="let util of data[step].herramientas.database" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
       </div>
       </div>
     </div>
 
-<div class="mt-10">
+<div class="mt-4">
 <h3 class="text-sm font-medium text-gray-900">Utilidades</h3>
 
 <div class="mt-4">
