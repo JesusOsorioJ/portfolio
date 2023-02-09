@@ -7,7 +7,7 @@ export var databases = [
           Integrantes:[
             {rol:"Desarollador",name:"Luis Alberto Salas",linkedin:"https://www.linkedin.com/in/luis-salcedo-salas/"},
             {rol:"Desarollador",name:"Francisco Huertas Cruz",linkedin:"https://www.linkedin.com/in/francisco-huertas-cruz/"},
-            {rol:"Desarollador",name:"Jesus Osorio jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+            {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
           ],
         herramientas:{ front:["javascript","react","sass","redux","socket"],
                        back:["node","sendgrid","cloudinary","stripe"],
