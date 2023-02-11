@@ -1,7 +1,4 @@
 
-<!-- <svg  id="svg1" width="100vw" height="100vh">
-  <circle id="svg"  cx="50" cy="50" r="5vh" fill="#28a92b" />
-</svg> -->
 <!-- <div class="font-mono flex flex-row hidden "  id="names1">
   <p class="text-4xl lg:text-6xl" id="names" >J</p>
   <p class="text-4xl lg:text-6xl" id="names">e</p>
@@ -17,61 +14,17 @@
   <p class="text-4xl lg:text-6xl" id="names" name="">o</p>  
 </div> -->
 <div (window:scroll)="onScroll()" id="home" class="snap-y scroll-smooth scroll-bar lg:h-screen ">
-<div class="h-screen snap-start isolate bg-white">
-  <div class="px-6 pt-6 lg:px-8">
-    <nav class="flex flex-row-reverse items-center justify-between" aria-label="Global">
-      <div class="flex lg:hidden">
-        <button  (click)="AddData()"  type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span  class="sr-only">Open main menu</span>
-          <!-- Heroicon name: outline/bars-3 -->
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden fixed lg:flex lg:gap-x-12">
-        <a href="#inicio" *ngIf="ph==0" class="text-sm no-underline font-semibold leading-6 text-gray-900">Inicio</a>
-        <a href="#inicio" *ngIf="ph!=0" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
 
-        <a href="#proyectos" *ngIf="ph==1" class="text-sm no-underline font-semibold leading-6 text-gray-900">Mis proyectos</a>
-        <a href="#proyectos" *ngIf="ph!=1" class="text-sm font-semibold leading-6 text-gray-900">Mis proyectos</a>
 
-        <a href="#contacto" *ngIf="ph==2" class="text-sm no-underline font-semibold leading-6 text-gray-900">Contacto</a>
-        <a href="#contacto" *ngIf="ph!=2" class="text-sm font-semibold leading-6 text-gray-900">Contacto</a>
 
-      </div>
-      
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div role="dialog"  aria-modal="true">
-      <div focus="true" *ngIf="show" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
-        <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
-          </a>
-          <button (click)="AddData()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only" >Close menu</span>
-            <!-- Heroicon name: outline/x-mark -->
-            <svg   class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path  stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a (click)="AddData()" href="" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Inicio</a>
+<div id="landing" class="h-screen snap-start isolate ">
+  
+  <app-header></app-header>
 
-              <a (click)="AddData()" href="#proyectos" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Mis proyectos</a>
+<svg  id="svg" width="10vh" height="10vh" fill="#87CEFA">
+  <circle id="svg1"  cx="50" cy="50" r="100vh"  />
+</svg>
 
-              <a (click)="AddData()" href="#contacto" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Contacto</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <main>
     <div class="relative sm:py-16 px-6 lg:px-8">
       <div class="mx-auto max-w-2xl py-20 sm:py-20 lg:py-20">
@@ -81,10 +34,11 @@
           <h1 *ngFor="let letter of name" id="names" class="justify-content text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">{{letter}}</h1></div>
           <div  class="mt-6 flex flew-row flex-wrap  justify-center">
            <div *ngFor="let palabra of parrafo;index as i">
-              <p  *ngIf="(i+2)%3==0" id="palabra1" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
-              <p  *ngIf="(i+1)%3==0" id="palabra2" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
-              <p  *ngIf="(i+0)%3==0" id="palabra3" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
-          </div></div>
+              <p  *ngIf="(i+3)%4==0" id="palabra1" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+2)%4==0" id="palabra2" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+1)%4==0" id="palabra3" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+0)%4==0" id="palabra4" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+            </div></div>
           
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a  id="topLine" href="#proyectos" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
