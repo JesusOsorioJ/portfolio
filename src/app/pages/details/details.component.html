@@ -63,17 +63,8 @@
 
 <!-- Options -->
 <div class="mt-4   lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
-  <ngb-carousel class="bg-black">
-    <ng-template *ngFor="let foto of data[step].imageswebpages" ngbSlide >
-        <div class="picsum-img-wrapper">
-            <img src="../../../assets/photo/{{data[step].url}}/{{foto.name}}.png" alt="Random first slide" />
-        </div>
-        <div class="carousel-caption">
-          <p class="bg-white rounded-md w-auto text-black font-bold">{{foto.des}}</p>
-       
-         </div>
-    </ng-template>
-</ngb-carousel>
+ 
+  <app-carrusel [step]:step></app-carrusel>
 
 <div class="flex flex-row flex-wrap gap-x-12">
 

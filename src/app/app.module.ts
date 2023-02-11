@@ -12,6 +12,7 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TargetDetailsComponent } from './components/target-details/target-details.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ declarations: [
     CarruselComponent,
     DetailsComponent,
     TargetDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
