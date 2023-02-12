@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TargetDetailsComponent } from './components/target-details/target-details.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { IntroballComponent } from './components/introball/introball.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ declarations: [
     DetailsComponent,
     TargetDetailsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    IntroballComponent
   ],
   imports: [
     BrowserModule,
