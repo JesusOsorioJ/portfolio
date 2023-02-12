@@ -98,21 +98,21 @@
     <div >
       <h2 class="text-sm font-medium text-gray-900">Frontend</h2>
       <div class="flex flex-row">
-         <img *ngFor="let util of data[step].herramientas.front" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
+         <img *ngFor="let util of data[step].herramientas.front" title={{util}} class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
       </div>
       </div> 
 
   <div *ngIf="(data[step].herramientas.back[0]).length!=0" >
     <h2 class="text-sm  font-medium text-gray-900">Backend</h2>
     <div class="flex flex-row">
-       <img *ngFor="let util of data[step].herramientas.back" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
+       <img *ngFor="let util of data[step].herramientas.back" title={{util}} class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
     </div>
     
     </div>
     <div >
       <h2 class="text-sm font-medium text-gray-900">DB</h2>
       <div class="flex flex-row">
-         <img *ngFor="let util of data[step].herramientas.database" title={{util}} class="grayscale mx-2 hover:grayscale-0 rounded-full h-6 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
+         <img *ngFor="let util of data[step].herramientas.database" title={{util}} class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{util}}.JPG" alt="">
       </div>
       </div>
     </div>

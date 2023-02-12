@@ -9,10 +9,12 @@ export class HeaderComponent {
   ph : number = 0;
   public onScroll(){
     this.ph = window.pageYOffset/window.innerHeight
+    console.log("ph",this.ph)
+
   }
   public AddData(){
     this.show=!this.show
     
   }
-  
+
 }
