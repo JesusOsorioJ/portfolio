@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   show : boolean = false
   ph : number = 0;
+  h : number = window.innerHeight;
+  w : number = window.innerWidth;
   public onScroll(){
-    this.ph = window.pageYOffset/window.innerHeight
-    console.log("ph",this.ph)
+    this.ph = window.pageYOffset/this.h
+    console.log("h",this.h)
 
   }
+
   public AddData(){
     this.show=!this.show
     

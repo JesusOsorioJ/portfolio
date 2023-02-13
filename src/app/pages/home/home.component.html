@@ -1,31 +1,23 @@
-<!-- <app-header></app-header> -->
-
-
-<!-- <div (window:scroll)="onScroll()" id="home" class="snap-y scroll-smooth scroll-bar lg:h-screen ">
 
 
 
-<div id="landing" class="h-screen">
-   -->
+
+<div (window:scroll)="onScroll()" id="home"  class=" scroll-smooth scroll-bar h-screen">
   
-
-<!-- <svg  id="svg" width="10vh" height="10vh" fill="#87CEFA">
-  <circle id="svg1"  cx="50" cy="50" r="100vh"  />
-</svg> -->
-<app-footer></app-footer>
-  <!-- <main>
+<div  id="landing" class="h-screen">
+  <app-header></app-header> 
+  <app-introball></app-introball>
+  <main >
     <div id="parrafonombre" class="relative sm:py-16 px-6 lg:px-8">
       <div class="mx-auto max-w-2xl py-15 sm:py-15 lg:py-15">
         <div class="text-center">
           <p id="minombre" class="mt-6 text-base font-mono text-blue-600/100 leading-8 text-gray-450">Hola, mi nombre es</p>
           <div class="flex flex-row justify-center " id="names1">
-          <h1 *ngFor="let letter of name" id="names" class="justify-content text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">{{letter}}</h1></div>
+          <h1 *ngFor="let letter of name" id="names" class=" italic justify-content text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">{{letter}}</h1></div>
           <div  class="mt-6 flex flew-row flex-wrap  justify-center">
            <div *ngFor="let palabra of parrafo;index as i">
-              <p  *ngIf="(i+3)%4==0" id="palabra1" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
-              <p  *ngIf="(i+2)%4==0" id="palabra2" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
-              <p  *ngIf="(i+1)%4==0" id="palabra3" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
-              <p  *ngIf="(i+0)%4==0" id="palabra4" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+1)%2==0" id="palabra1" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+0)%2==0" id="palabra2" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
             </div></div>
           
           <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -39,14 +31,15 @@
     </div>
   </main>
 </div>
-<div  id="proyectos" class="h-screen scroll-smooth bg-gray-100">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+<div  id="proyectos" class="h-screen  bg-gray-100">
+  <div class="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:max-w-none lg:py-10">
       <p class="text-2xl font-bold text-gray-900">Mis proyectos</p>
 
       <div class="mt-6 space-y-12 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
         <div  *ngFor="let date of data" class="group relative">
-          <a href="details/{{date.url}}" class="relative h-80 w-full overflow-hidden rounded-lg bg-white hover:scale-110 group block sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+          <a href="details/{{date.url}}" class="relative no-underline h-80 w-full overflow-hidden rounded-lg bg-white hover:scale-110 group block sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
             <div class="bg-cover md:bg-top h-64 flex flex-col justify-end p-2  " style="background-image: url(../../../assets/photo/{{date.url}}/{{date.imageswebpages[0].name}}.png)">
              <div class="bg-white flex flex-col  rounded-lg p-2 opacity-80 hidden group-hover:flex">
                 <h4 class="hidden no-underline group-hover:flex">{{date.name}}</h4>
@@ -65,9 +58,6 @@
     </div>
   </div>
 </div>
-<div id="contacto" class="lg:h-screen scroll-smooth  bg-gray-100">
-  <app-footer></app-footer>
 </div>
-
-
-</div> -->
+<app-footer></app-footer>
+</div>
