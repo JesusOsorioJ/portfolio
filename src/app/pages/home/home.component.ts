@@ -55,8 +55,8 @@ export class HomeComponent {
     tl.to("#palabra2",0.05, {color:"#495670"},"+=0.5")
     tl.to("#palabra2",3, {color:"#a8b2d1"},"+=0.1") 
 
-    tl.to("#contactobtn",0, {display:"block"})
-    tl.to("#contactobtn",3, {y:"0vw"})
+    tl.to("#contactobtn",0, {display:"block"},"-=4.0")
+    tl.to("#contactobtn",2, {y:"0vw"},"-=4.0")
     tl.to("#target",0, {yPercent:100},0)
     }, 1)
 
@@ -66,7 +66,6 @@ export class HomeComponent {
   public onScroll(){
     
     this.ph = window.pageYOffset/this.h
-    console.log("this.ph",this.ph)
     if(this.ph>0.6){
       
     gsap.to("#target",2,  {yPercent:0})}
