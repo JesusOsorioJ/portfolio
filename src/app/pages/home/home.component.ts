@@ -21,7 +21,6 @@ export class HomeComponent {
   async ngOnInit(){
     let tl = gsap.timeline()
 
-    
     tl.to("#contactobtn",0, {y:"15vh", display:"none"},0) 
 
     setTimeout(() => {
@@ -57,38 +56,11 @@ export class HomeComponent {
 
     tl.to("#contactobtn",0, {display:"block"},"-=4.0")
     tl.to("#contactobtn",2, {y:"0vw"},"-=4.0")
-    tl.to("#target",0, {yPercent:100},0)
+    // tl.to("#target",0, {yPercent:100},0)
     }, 1)
 
   }
   constructor(private router: Router) {}
-  
-  public onScroll(){
-    
-    this.ph = window.pageYOffset/this.h
-    if(this.ph>0.6){
-      
-    gsap.to("#target",2,  {yPercent:0})}
-    
-    if (Math.abs(this.ph-this.p)>=0.3&&this.p!=this.ph){
-      let ent 
-      if(this.ph-this.p>0){ ent = Math.ceil(this.ph)}else{
-         ent = Math.floor(this.ph)
-      }
-      this.p = this.ph
-      // let routas = ["#inicio","#proyectos","#contacto"]
-      // this.router.navigate('/#proyecto')
-      window.scroll(0, ent*this.h);
-      
-      // let vh = ent*100+"vh"
-      // let vhi = (ent*100-10)+"vh"
-      // gsap.to("#headerword",1, {y:vhi})  
-      // gsap.to("#headerword",1.5, {y:vh}) 
-      
-    }
-   
-    
-  }
   
 }
 

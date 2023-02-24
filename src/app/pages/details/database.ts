@@ -12,7 +12,7 @@ export var databases = [
         herramientas:{ front:["javascript","react","sass","redux","socket"],
                        back:["node","sendgrid","cloudinary","stripe"],
                        database:["mongodb"]},
-        descripcion:"Pagina intermediadora entre profesionales especialidados y clientes, en labores domesticas como electricos, plomeria, mecanico, entre otras.​",
+        descripcion:"Pagina intermediadora entre profesionales especializados y clientes, en labores domesticas como electrica, plomeria, mecanica, entre otras.​",
         Utilidades:[
           "Inicio de sesion con encriptacion (jwt)",
           "Filtro de profesional por categorias",
@@ -60,7 +60,64 @@ export var databases = [
           {name:"curso",des:"Gestion de curso"},
           {name:"suscripcion",des:"Pago suscripcion"}],
         videopage:"https://www.youtube.com/watch?v=QLfULI03pl0"
-      }
+      },
+      {
+        no : 2,
+        name:"ArchiBige Doc",
+        url:"archibige",
+        Integrantes:[
+          {rol:"Empresa",name:"Ilia Sofia Castilla",linkedin:""},
+          {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+        ],
+      herramientas:{ front:["javascript","angular","tailwind","gsap","scrolltrigger"],
+                     back:[""],
+                     database:[""]},
+      descripcion:"Empresa privada consultora de archivos, bibliotecas y centro de documentación, orientada a brindar capacitaciones y asesorías.​",
+      Utilidades:[
+        "Landing page con carrusel",
+        "Informacion general de la empresa",
+        "Vista de opiniones cliente carrusel",
+        "Ubicacion google maps",
+        "Animaciones y scrolltrigger gsap",
+      ],
+      backend:null,
+      frontend:"https://github.com/JesusOsorioJ/empresasofia",
+      webpage:"https://empresasofia.vercel.app/",
+      imageswebpages:[
+        {name:"landing",des:"Home de pagina"},
+        {name:"somos",des:"Descripcion de empresa"},
+        {name:"servicios",des:"Servicios prestados"},
+        {name:"opiniones",des:"Opiniones de cliente en carrusel"},
+        {name:"ubicacion",des:"Ubicacion con google maps"},],
+      videopage:null
+    },
+    {
+      no : 3,
+      name:"Mega Tv",
+      url:"megatv",
+      Integrantes:[
+        {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+      ],
+    herramientas:{ front:["javascript","react","sass","redux"],
+                   back:["node","express","nodemon"],
+                   database:["mongodb"]},
+    descripcion:"Pagina intermediadora entre profesionales especialidados y clientes, en labores domesticas como electricos, plomeria, mecanico, entre otras.​",
+    Utilidades:[
+      "Envio formulario por parte de clientes",
+      "Carga de dirrecciones de base de datos en formulario cliente",
+      "Envio de correo de autenticacion de usuario",
+      "Diseño amigable y moderno con usuario",
+    ],
+    backend:"https://github.com/JesusOsorioJ/Quick-call-Backend",
+    frontend:"https://github.com/JesusOsorioJ/megatv",
+    webpage:"https://megatv.vercel.app/",
+    imageswebpages:[
+      {name:"landing",des:"Home de pagina"},
+      {name:"great",des:"Formulario envio correo y telefono"},
+      {name:"plan",des:"Planes de tv disponibles"},
+      {name:"address",des:"Direcciones disponibles en DB"}],
+    videopage:null
+  },
 ]
 
   
