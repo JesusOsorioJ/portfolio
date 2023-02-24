@@ -106,7 +106,7 @@ export var databases = [
       "Envio formulario por parte de clientes",
       "Carga de dirrecciones de base de datos en formulario cliente",
       "Envio de correo de autenticacion de usuario",
-      "Diseño amigable y moderno con usuario",
+      "Diseño amigable y moderno con usuario", 
     ],
     backend:"https://github.com/JesusOsorioJ/Quick-call-Backend",
     frontend:"https://github.com/JesusOsorioJ/megatv",
