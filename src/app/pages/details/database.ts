@@ -108,7 +108,7 @@ export var databases = [
       "Envio de correo de autenticacion de usuario",
       "Diseño amigable y moderno con usuario", 
     ],
-    backend:"https://github.com/JesusOsorioJ/Quick-call-Backend",
+    backend:"https://github.com/JesusOsorioJ/megatvback",
     frontend:"https://github.com/JesusOsorioJ/megatv",
     webpage:"https://megatv.vercel.app/",
     imageswebpages:[
