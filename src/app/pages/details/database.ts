@@ -118,6 +118,40 @@ export var databases = [
       {name:"address",des:"Direcciones disponibles en DB"}],
     videopage:null
   },
+  {
+    no : 4,
+    name:"Backend GraphQl",
+    url:"graphql",
+    Integrantes:[
+      {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+    ],
+  herramientas:{ front:[""],
+                 back:["node","express","nodemon","graphql"],
+                 database:["mongodb"]},
+  descripcion:"backend con uso de graphQl para la creacion y consumo de informacion de base de datos en mongoDB​",
+  Utilidades:[
+    "QUERIES",
+    "allUser: búsqueda total de usuarios o por Name, LastName, IsMilitar",
+    "Búsqueda obligatoria por userID: UserDocumentByUser, ContactInfoByUser, allUserDocument",
+    "MUTATIONS", 
+    "Creacion un usuario: createUser ",
+    "Login un usuario: LoginUser",
+    "Modifica datos de usuario: UpdateUser"
+  ],
+  frontend:null,
+  backend:"https://github.com/JesusOsorioJ/GraphQlexercise",
+  webpage:"https://graphqlexercise.up.railway.app/graphql",
+  imageswebpages:[
+    {name:"createuser",des:"Creacion de usuario, otorgacion de token"},
+    {name:"allquerymutation",des:"Todas las queries and mutations"},
+    {name:"createdocument",des:"Creacion de document, ingreso de token"},
+    {name:"createcontact",des:"Creacion de document by username"},
+    {name:"allname",des:"Query allname, with email of user by return"},
+    {name:"allmutation",des:"Todas las mutacion del programa"}
+  ],
+  videopage:null
+},
+  
 ]
 
   

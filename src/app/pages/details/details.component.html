@@ -17,7 +17,7 @@
           <a href="{{data[step].webpage}}"
             class=" max-w-fit no-underline mt-10 flex-3 w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Ir
             a pagina web</a>
-          <a href="{{data[step].frontend}}"
+          <a *ngIf="data[step].frontend!=null" href="{{data[step].frontend}}"
             class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Frontend</a>
           <a *ngIf="data[step].backend!=null" href="{{data[step].backend}}"
             class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Backend</a>
@@ -47,7 +47,7 @@
         </div>
 
         <div class=" mt-4 flex flex-row flex-wrap">
-          <div>
+          <div *ngIf="(data[step].herramientas.front[0]).length!=0">
             <h2 class="text-sm font-font text-gray-200">Frontend</h2>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.front" title={{util}}
@@ -79,8 +79,8 @@
           <h3 class="text-sm font-medium text-gray-200">UTILIDADES</h3>
           <div class="mt-4 group hover-group:scale-150">
             <ul role="list" class="list-disc space-y-2 pl-4 text-sm ">
-              <li *ngFor="let util of data[step].Utilidades" class="text-gray-200"><span
-                  class="text-gray-100 hover:text-base">{{util}}</span></li>
+              <li *ngFor="let util of data[step].Utilidades" class="text-gray-200">
+                <span class="text-gray-100 hover:text-base">{{util}}</span></li>
             </ul>
           </div>
         </div>
