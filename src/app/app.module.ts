@@ -8,7 +8,6 @@ import { DetailsComponent } from './pages/details/details.component';
 
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -30,7 +29,6 @@ declarations: [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
