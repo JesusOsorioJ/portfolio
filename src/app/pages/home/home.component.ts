@@ -16,11 +16,11 @@ ngOnInit(){
       scrollTrigger: {
         trigger: "#target", start: "center 80%", end: "center 0%", 
         toggleActions: "play none none none",
-        markers: {
-              startColor: "purple",
-              endColor: "fuchsia",
-              fontSize: "3rem",
-            },
+        // markers: {
+        //       startColor: "purple",
+        //       endColor: "fuchsia",
+        //       fontSize: "3rem",
+        //     },
        
       },
     });
