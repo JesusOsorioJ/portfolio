@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { databases } from './database'
 
+
 @Component({
   selector: 'details-home',
   templateUrl: './details.component.html'
