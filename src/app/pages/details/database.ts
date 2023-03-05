@@ -175,9 +175,9 @@ Utilidades:[
   "Filtro de productos por nombre"
 
 ],
-frontend:"https://github.com/JesusOsorioJ/Dreadful",
+frontend:"https://github.com/JesusOsorioJ/dreadfulmovie",
 backend:null,
-webpage:"https://dreaful.vercel.app/",
+webpage:"https://dreadfulmovie.vercel.app/",
 imageswebpages:[
   {name:"pagination",des:"Paginacion de productos por 8 items"},
   {name:"filter",des:"Pagina para filtro de pagina"},
