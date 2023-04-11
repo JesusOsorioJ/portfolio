@@ -1,13 +1,12 @@
  
-   <swiper [slidesPerView]="1" class="bg-cyan-700" [spaceBetween]="50" [navigation]="true" [navigation]="true" [pagination]="{ clickable: true }"
-   [loop]="true" [autoplay]="{delay: 2000}">
+   <swiper [slidesPerView]="1" [spaceBetween]="50" [navigation]="true" [navigation]="true" [loop]="true" [autoplay]="{delay: 3000}">
 
    <ng-template *ngFor="let foto of data[step].imageswebpages" swiperSlide >
     <div class="picsum-img-wrapper">
         <img src="../../../assets/photo/{{data[step].url}}/{{foto.name}}.png" alt="Random first slide" />
     </div>
     <div class="carousel-caption">
-      <p class="bg-white rounded-md w-auto text-black font-bold">{{foto.des}}</p>
+      <p class="bg-white rounded-md w-auto text-base border border-gray-400 text-black text-center font-bold z-100">{{foto.des}}</p>
    
      </div>
 </ng-template>
