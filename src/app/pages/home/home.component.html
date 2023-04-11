@@ -1,8 +1,8 @@
 
-<svg  id="svg1" width="100vw" height="100vh">
+<!-- <svg  id="svg1" width="100vw" height="100vh">
   <circle id="svg"  cx="50" cy="50" r="5vh" fill="#28a92b" />
-</svg>
-<div class="flex flex-row hidden "  id="names1">
+</svg> -->
+<!-- <div class="font-mono flex flex-row hidden "  id="names1">
   <p class="text-4xl lg:text-6xl" id="names" >J</p>
   <p class="text-4xl lg:text-6xl" id="names">e</p>
   <p class="text-4xl lg:text-6xl" id="names">s</p>
@@ -14,9 +14,9 @@
   <p class="text-4xl lg:text-6xl" id="names">o</p>
   <p class="text-4xl lg:text-6xl" id="names">r</p>
   <p class="text-4xl lg:text-6xl" id="names">i</p>
-  <p class="text-4xl lg:text-6xl" id="names">o</p>  
-</div>
-<div (window:scroll)="onScroll()" id="home" class="hidden snap-y scroll-smooth scroll-bar lg:h-screen ">
+  <p class="text-4xl lg:text-6xl" id="names" name="">o</p>  
+</div> -->
+<div (window:scroll)="onScroll()" id="home" class="snap-y scroll-smooth scroll-bar lg:h-screen ">
 <div class="h-screen snap-start isolate bg-white">
   <div class="px-6 pt-6 lg:px-8">
     <nav class="flex flex-row-reverse items-center justify-between" aria-label="Global">
@@ -77,14 +77,19 @@
       <div class="mx-auto max-w-2xl py-20 sm:py-20 lg:py-20">
         <div class="text-center">
           <p class="mt-6 text-base font-mono text-blue-600/100 leading-8 text-gray-450">Hola, mi nombre es</p>
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">Jesus Osorio,</h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Soy un programador FullStack con Enfasis en el Stack Mern (MongoDB, Express.js, React.js y Node.js) con aptitud de aprender nuevas tecnologias.
-             Conoce mis proyectos dando click debajo o en la parte superior.
-          </p>
+          <div class="flex flex-row " id="names1">
+          <h1 *ngFor="let letter of name" id="names" class="justify-content text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">{{letter}}</h1></div>
+          <div  class="mt-6 flex flew-row flex-wrap  justify-center">
+           <div *ngFor="let palabra of parrafo;index as i">
+              <p  *ngIf="(i+2)%3==0" id="palabra1" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+1)%3==0" id="palabra2" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+              <p  *ngIf="(i+0)%3==0" id="palabra3" class=" mr-1 mb-0 text-lg leading-8 ">{{palabra}} </p>
+          </div></div>
+          
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a  id="topLine" href="#proyectos" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Mis proyectos</a>
-            <a href="#contacto" class="text-base font-semibold leading-7 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+            <a href="#contacto" class="text-base font-semibold leading-7 text-gray-900">Contacto <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
