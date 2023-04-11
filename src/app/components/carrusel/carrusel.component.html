@@ -1,11 +1,12 @@
- <ngb-carousel>
-        <ng-template *ngFor="let foto of fotos.imageswebpages" ngbSlide>
+ 
+    <ngb-carousel class="bg-black">
+        <ng-template *ngFor="let foto of data[step].imageswebpages" ngbSlide >
             <div class="picsum-img-wrapper">
-                <img src="../../../assets/photo/fotos[pos].url/foto.name" alt="Random first slide" />
+                <img src="../../../assets/photo/{{data[step].url}}/{{foto.name}}.png" alt="Random first slide" />
             </div>
             <div class="carousel-caption">
-
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
+              <p class="bg-white rounded-md w-auto text-black font-bold">{{foto.des}}</p>
+           
+             </div>
         </ng-template>
     </ngb-carousel>
