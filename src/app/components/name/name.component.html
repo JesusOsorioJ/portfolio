@@ -4,11 +4,11 @@
       <div class="text-center">
         <p id="minombre" class="mt-6 text-base font-mono leading-8 ">Hola, mi nombre es</p>
         <div class="flex flex-row justify-center " id="names1">
-        <h1 *ngFor="let letter of name" id="names" class="italic justify-content text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">{{letter}}</h1></div>
+        <p *ngFor="let letter of name" id="names" class="italic justify-content text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-6xl">{{letter}}</p></div>
         <div  class="mt-6 flex flew-row flex-wrap  justify-center">
          <div *ngFor="let palabra of parrafo;index as i">
-            <p  *ngIf="(i+1)%2==0" id="palabra1" class="pr-1 text-lg leading-8">{{palabra}} </p>
-            <p  *ngIf="(i+0)%2==0" id="palabra2" class="pr-1 text-lg leading-8">{{palabra}} </p>
+            <p  *ngIf="(i+1)%2==0" id="palabra1" class="pr-1 mb-0 text-lg leading-8">{{palabra}} </p>
+            <p  *ngIf="(i+0)%2==0" id="palabra2" class="pr-1 mb-0 text-lg leading-8">{{palabra}} </p>
           </div></div>
         
         <div class="mt-10 flex items-center justify-center gap-x-6">
