@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { databases } from './database'
 
 @Component({
