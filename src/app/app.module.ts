@@ -9,7 +9,7 @@ import { DetailsComponent } from './pages/details/details.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TargetDetailsComponent } from './components/target-details/target-details.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IntroballComponent } from './components/introball/introball.component';
@@ -21,7 +21,6 @@ declarations: [
     HomeComponent,
     CarruselComponent,
     DetailsComponent,
-    TargetDetailsComponent,
     FooterComponent,
     HeaderComponent,
     IntroballComponent
