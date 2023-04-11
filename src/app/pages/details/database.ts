@@ -102,15 +102,15 @@ export var databases = [
   },
   {
     no: 3,
-    name: "Test English(en proceso)",
+    name: "Test English",
     url: "testenglish",
     Integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
     ],
     herramientas: {
-      all: ["nextjs", "typescript", "tailwind","prisma","react-hook-form","eslint","postgresql"],
-      front: ["nextjs", "typescript", "tailwind","prisma","react-hook-form","eslint"],
-      back: [""],
+      all: ["nextjs", "typescript", "tailwind","prisma","reacthookform","eslint","postgresql"],
+      front: ["nextjs", "typescript", "tailwind","reacthookform","eslint"],
+      back: ["prisma"],
       database: ["postgresql"]
     },
     descripcion: "TestEnglish es una pagina donde podras evaluar tu vocabulario en ingles con palabras de diferentes categorias.​",
@@ -123,7 +123,7 @@ export var databases = [
     ],
     backend: null,
     frontend: "https://github.com/JesusOsorioJ/testenglish",
-    webpage: "",
+    webpage: "https://testenglish.vercel.app/",
     imageswebpages: [
       { name: "landing", des: "Home de pagina" },
       { name: "login", des: "Login y signup de usuario" },
