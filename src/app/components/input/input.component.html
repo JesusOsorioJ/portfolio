@@ -19,7 +19,7 @@
         </mat-form-field>
       </form>
       <div *ngIf="data.length<5" class="text-small text-white">Filtrado por {{valueObjet1}}</div>
-      <div id="target1" class="mt-6 space-y-12 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0 ">
+      <div id="target1" class="mt-6 space-y-12 lg:grid lg:grid-cols-4 lg:gap-6 lg:space-y-0 ">
         <div  id="target" *ngFor="let date of data" class="group relative">
           <a href="details/{{date.url}}" class="relative items-end no-underline h-80 w-full overflow-hidden rounded-lg hover:scale-110 group block sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
              <div class="flex flex-col  rounded-lg p-2 opacity-80 absolute self-end group-hover:flex z-10 bg-white w-full border-2 border-gray-400">
