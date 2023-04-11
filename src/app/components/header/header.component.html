@@ -1,23 +1,23 @@
-<div class="px-6 pt-6 lg:px-8">
-    <nav class="flex flex-row-reverse items-center justify-between" aria-label="Global">
+<div (window:scroll)="onScroll()" class="px-6 pt-6 lg:px-8 flex flex-row justify-end">
+    <nav class="flex flex-row items-center " aria-label="Global">
       <div class="flex lg:hidden">
-        <button  (click)="AddData()"  type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <button id="headerword" (click)="AddData()"  type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
           <span  class="sr-only">Open main menu</span>
           <!-- Heroicon name: outline/bars-3 -->
-          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <svg class="h-6 w-6"   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
       </div>
-      <div class="hidden fixed lg:flex lg:gap-x-12">
-        <a href="#inicio" *ngIf="ph==0" class="text-sm no-underline font-semibold leading-6 text-gray-900">Inicio</a>
-        <a href="#inicio" *ngIf="ph!=0" class="text-sm font-semibold leading-6 text-gray-900">Inicio</a>
+      <div id="headerword" class="hidden lg:flex lg:gap-x-12">
+        <a href="#inicio" *ngIf="ph==0" class="text-base  font-semibold no-underline leading-6 text-blue-700">Inicio</a>
+        <a href="#inicio" *ngIf="ph!=0" class="text-base font-semibold no-underline leading-6 text-gray-900">Inicio</a>
 
-        <a href="#proyectos" *ngIf="ph==1" class="text-sm no-underline font-semibold leading-6 text-gray-900">Mis proyectos</a>
-        <a href="#proyectos" *ngIf="ph!=1" class="text-sm font-semibold leading-6 text-gray-900">Mis proyectos</a>
+        <a href="#proyectos" *ngIf="ph==1" class="text-base  font-semibold no-underline leading-6 text-blue-700">Mis proyectos</a>
+        <a href="#proyectos" *ngIf="ph!=1" class="text-base font-semibold no-underline leading-6 text-gray-900">Mis proyectos</a>
 
-        <a href="#contacto" *ngIf="ph==2" class="text-sm no-underline font-semibold leading-6 text-gray-900">Contacto</a>
-        <a href="#contacto" *ngIf="ph!=2" class="text-sm font-semibold leading-6 text-gray-900">Contacto</a>
+        <a href="#contacto" *ngIf="ph==2" class="text-base font-semibold no-underline leading-6 text-blue-700">Contacto</a>
+        <a href="#contacto" *ngIf="ph!=2" class="text-base font-semibold no-underline leading-6 text-gray-900">Contacto</a>
 
       </div>
       
@@ -30,11 +30,11 @@
             <span class="sr-only">Your Company</span>
             <img class="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
           </a>
-          <button (click)="AddData()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+          <button  (click)="AddData()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only" >Close menu</span>
             <!-- Heroicon name: outline/x-mark -->
-            <svg   class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path  stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <svg    class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
