@@ -32,6 +32,7 @@ export class HomeComponent {
     tl.to(["#minombre","#names"],0, {display:"block",x:'-8vw'},3.00)
     tl.to(["#minombre","#names"],2, {color:"black",x:'0vw' })
     tl.to("#minombre", 2 , {color:"#0000CD",x:'0vw' })
+    
     //Salto y cambio de estilo
     tl.to("#names", 0.2, {y:'3vh', stagger:.1, ease:"power1.inOut"},"-=1.2")
     tl.to("#names", 0.33, {y:'-5vh', stagger:.1, ease:"power1.out" },"-=1.2")
