@@ -1,0 +1,33 @@
+<div class="flex flex-row flex-wrap">
+  <div *ngIf="date.herramientas.front[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
+    <p class="text-gray-300">Front</p>
+    <div class="flex">
+      <img  *ngFor="let i of [0,1]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.front[i]}}.JPG" alt=""> 
+    </div>
+  </div>
+  <div *ngIf="date.herramientas.back[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
+    <p class="text-gray-300 ">Back</p>
+    <div class="flex">
+      <img  *ngFor="let i of [0,1]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[i]}}.JPG" alt=""> 
+    </div>
+  </div>
+  <div *ngIf="date.herramientas.database[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
+    <p class="text-gray-300">DB</p>
+    <div class="flex">
+      <img  *ngFor="let i of [0]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.database[i]}}.JPG" alt=""> 
+    </div>
+  </div>
+  <div *ngIf="date.herramientas.test[0]!.length!=0" class="mx-1 mt-2 flex flex-col ">
+    <p class="text-gray-300">Test</p>
+    <div class="flex">
+      <img  *ngFor="let i of [0]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.test[i]}}.JPG" alt=""> 
+    </div>
+  </div>
+</div>
+
+  <!-- <img  *ngIf="date.herramientas.front[0]!.length!=0"class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.front[1]}}.JPG" alt=""> 
+  <img  *ngIf="date.herramientas.front[0]!.length!=0"class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.front[1]}}.JPG" alt=""> 
+  
+  <img *ngIf="date.herramientas.back[0]!.length!=0" class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[0]}}.JPG" alt=""> 
+  <img  *ngIf="date.herramientas.back[0]!.length!=0" class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[1]}}.JPG" alt=""> 
+  <img  *ngIf="date.herramientas.database[0]!.length!=0"class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.database[0]}}.JPG" alt="">  -->
