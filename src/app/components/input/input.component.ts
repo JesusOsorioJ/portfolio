@@ -14,7 +14,7 @@ export class InputComponent implements OnInit {
   valueObjet =""
   valueObjet1 =""
   myControl = new FormControl('');
-  options: string[] = ["javascript","react","node","express","graphql","angular","nodemon","mongodb","sass",
+  options: string[] = ["javascript","react","node","express","typescript","graphql","angular","nextjs","nodemon","mongodb","mysql","sass",
   "tailwind","redux","socket","sendgrid","cloudinary","stripe",
   "reactrouter","firebase","fbauthentication","gsap","scrolltrigger"];
   filteredOptions!: Observable<string[]>;

@@ -71,8 +71,8 @@ export var databases = [
           {rol:"Empresa",name:"Ilia Sofia Castilla",linkedin:""},
           {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
         ],
-      herramientas:{ all:["javascript","angular","tailwind","gsap","scrolltrigger"],
-                     front:["angular","tailwind","javascript","gsap","scrolltrigger"],
+      herramientas:{ all:["typescript","angular","tailwind","gsap","scrolltrigger"],
+                     front:["angular","tailwind","typescript","gsap","scrolltrigger"],
                      back:[""],
                      database:[""]},
       descripcion:"Empresa privada consultora de archivos, bibliotecas y centro de documentación, orientada a brindar capacitaciones y asesorías.​",
@@ -85,7 +85,7 @@ export var databases = [
       ],
       backend:null,
       frontend:"https://github.com/JesusOsorioJ/empresasofia",
-      webpage:"https://empresasofia.vercel.app/",
+      webpage:"https://pgdi.vercel.app/",
       imageswebpages:[
         {name:"landing",des:"Home de pagina"},
         {name:"somos",des:"Descripcion de empresa"},
@@ -158,13 +158,13 @@ export var databases = [
 },
 {
   no : 5,
-  name:"Dreadful (en proceso)",
+  name:"Dreadful",
   url:"dreadful",
   Integrantes:[
     {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
   ],
-herramientas:{ all:["angula","node","express","nodemon","mongodb"],
-               front:["angular","tailwind","javascript"],
+herramientas:{ all:["angular","typescript","tailwind"],
+               front:["angular","typescript","tailwind"],
                back:[""],
                database:[""]},
 descripcion:"Pagina para el consumo de servicios de API y filtro por nombre de productos​",
@@ -184,6 +184,35 @@ imageswebpages:[
   {name:"landing",des:"Landing page, link por movies y series"},
   {name:"filter1",des:"Filtro de productos por productos"},
   
+],
+videopage:null
+},
+{
+  no : 6,
+  name:"Crud Nextjs",
+  url:"crudnext",
+  Integrantes:[
+    {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+  ],
+herramientas:{ all:["nextjs","typescript","tailwind","mysql"],
+               front:["nextjs","javascript","tailwind"],
+               back:[""],
+               database:["mysql"]},
+descripcion:"Pagina nextjs creacion backend/frontend para creacion de API CRUD​",
+Utilidades:[
+  "backend/frontend en el mismo documento",
+  "consumo de API para elimanar, crear y modificar",
+  "Backend para cosumo de informacion de frontend",
+  "Estilos con tailwind"
+
+],
+frontend:"https://github.com/JesusOsorioJ/crudnext",
+backend:null,
+webpage:"https://crudnext-mu.vercel.app/",
+imageswebpages:[
+  {name:"landing",des:"Lista de productos creados"},
+  {name:"addnew",des:"Menu para gregar nuevo producto"},
+  {name:"edit",des:"Menu para modificar producto"},  
 ],
 videopage:null
 },
