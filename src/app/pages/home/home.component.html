@@ -35,37 +35,28 @@
     </div>
   </main>
 </div>
-<div  id="proyectos" class="lg:h-screen scroll-smooth bg-gray-100">
+<div  id="proyectos" class="h-screen scroll-smooth bg-gray-100">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:max-w-none lg:py-10">
       <p class="text-2xl font-bold text-gray-900">Mis proyectos</p>
 
       <div class="mt-6 space-y-12 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
         <div  *ngFor="let date of data" class="group relative">
-          <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-50  sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-            <div class="bg-cover md:bg-top h-64 flex flex-col justify-end p-2 " style="background-image: url(../../../assets/photo/{{date.url}}/{{date.imageswebpages[0].name}}.png)">
-
-              <!-- <a href="details/{{date.url}}"> -->
-                <p class="hover:opacity-100 ">{{date.name}}</p>
+          <a href="details/{{date.url}}" class="relative h-80 w-full overflow-hidden rounded-lg bg-white hover:scale-110 group block sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+            <div class="bg-cover md:bg-top h-64 flex flex-col justify-end p-2  " style="background-image: url(../../../assets/photo/{{date.url}}/{{date.imageswebpages[0].name}}.png)">
+             <div class="bg-white flex flex-col  rounded-lg p-2 opacity-80 hidden group-hover:flex">
+                <h4 class="hidden no-underline group-hover:flex">{{date.name}}</h4>
                 
-              
-              <div class="flex flex-row">
+              <div class="flex-row  hidden group-hover:flex">
               <img  class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.front[0]}}.JPG" alt=""> 
               <img  class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.front[1]}}.JPG" alt=""> 
-              <img  class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[0]}}.JPG" alt=""> 
-              <img  class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[1]}}.JPG" alt=""> 
+              <img *ngIf="date.herramientas.back[0]!.length!=0" class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[0]}}.JPG" alt=""> 
+              <img  *ngIf="date.herramientas.back[0]!.length!=0" class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.back[1]}}.JPG" alt=""> 
               <img  class="mx-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.herramientas.database[0]}}.JPG" alt=""> 
             </div>
             </div>
           </div>
-          <h3 class="mt-6 text-sm text-gray-500">
-            
-          </h3>
-          <p class="text-base font-semibold hover:scale-120 text-gray-900">
-            {{date.webpage}}</p>
-        </div>
-
-        
+          </a>
       </div>
     </div>
   </div>
