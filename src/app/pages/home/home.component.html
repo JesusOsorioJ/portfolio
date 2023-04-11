@@ -8,8 +8,8 @@
   <app-header></app-header> 
   <app-introball></app-introball>
   <main >
-    <div id="parrafonombre" class="relative sm:py-16 px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl py-15 sm:py-15 lg:py-15">
+    <div id="parrafonombre" class="relative py-16 px-6 lg:px-8 lg:py-0">
+      <div class="mx-auto max-w-2xl ">
         <div class="text-center">
           <p id="minombre" class="mt-6 text-base font-mono text-blue-600/100 leading-8 text-gray-450">Hola, mi nombre es</p>
           <div class="flex flex-row justify-center " id="names1">
@@ -23,7 +23,7 @@
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a  id="contactobtn" href="#proyectos" class="rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Mis proyectos</a>
-            <a  id="contactobtn" href="#contacto" class="text-base font-semibold leading-7 text-gray-900">Contacto <span aria-hidden="true">→</span></a>
+            <a  id="contactobtn" href="#contacto" class="text-base rounded-md  px-3.5 py-1.5 font-semibold leading-7 text-gray-900 bg-[#ccd6f6]" >Contacto <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -32,13 +32,13 @@
   </main>
 </div>
 
-<div  id="proyectos" class="h-screen  bg-gray-100">
+<div  id="proyectos" class="h-screen  bg-[#0a192f]">
   <div class="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:max-w-none lg:py-10">
-      <p class="text-2xl font-bold text-gray-900">Mis proyectos</p>
+      <p class="text-2xl font-bold text-[#D3D3D3]">Mis proyectos</p>
 
-      <div class="mt-6 space-y-12 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
-        <div  *ngFor="let date of data" class="group relative">
+      <div id="target1" class="truncate mt-6 space-y-12 lg:grid lg:grid-cols-4 lg:gap-x-6 lg:space-y-0">
+        <div  id="target" *ngFor="let date of data" class="group relative">
           <a href="details/{{date.url}}" class="relative no-underline h-80 w-full overflow-hidden rounded-lg bg-white hover:scale-110 group block sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
             <div class="bg-cover md:bg-top h-64 flex flex-col justify-end p-2  " style="background-image: url(../../../assets/photo/{{date.url}}/{{date.imageswebpages[0].name}}.png)">
              <div class="bg-white flex flex-col  rounded-lg p-2 opacity-80 hidden group-hover:flex">
