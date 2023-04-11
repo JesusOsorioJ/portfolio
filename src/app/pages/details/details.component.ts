@@ -12,6 +12,7 @@ export class DetailsComponent {
   id : string = "" ;
   step : number = 0 ;
   show : boolean = false
+  
   public AddData(){
     this.show=!this.show
   }
