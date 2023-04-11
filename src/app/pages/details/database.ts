@@ -5,11 +5,11 @@ export var databases = [
           name:"Quick call",
           url:"quickcall",
         herramientas:{ front:["javascript","react","sass","redux","socket"],
-                       back:["node","jwt","sendgrid","cloudinary","stripe"],
+                       back:["node","sendgrid","cloudinary","stripe"],
                        database:["mongodb"]},
-        descripcion:"Pagina para conectar profesionales especialidades con clientes, ​",
+        descripcion:"Pagina para intermediaria entre profesionales especialidades y clientes, en labores electricas, plomeria, mecanico, entre otras.​",
         Utilidades:[
-          "Inicio de sesion con encriptacion",
+          "Inicio de sesion con encriptacion (jwt)",
           "Envio de correo de autenticacion de usuario",
           "Envio de imagenes con Cloudinary",
           "Chat en tiempo real",
@@ -40,7 +40,7 @@ export var databases = [
         "creacion y gestion de curso en linea",
         "Posibilidad de gestionar test en vivo o con tiempo"
       ],
-        backend:"",
+        backend:null,
         frontend:"https://github.com/JesusOsorioJ/my-app",
         webpage:"https://my-appcreate.vercel.app/",
         imageswebpages:[
