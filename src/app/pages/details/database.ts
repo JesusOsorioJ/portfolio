@@ -156,6 +156,37 @@ export var databases = [
   ],
   videopage:null
 },
+{
+  no : 5,
+  name:"Dreadful (en proceso)",
+  url:"dreadful",
+  Integrantes:[
+    {rol:"Desarollador",name:"Jesus Osorio Jimenez",linkedin:"https://www.linkedin.com/in/jesus-david-osorio-jimenez/"},
+  ],
+herramientas:{ all:["angula","node","express","nodemon","mongodb"],
+               front:["angular","tailwind","javascript"],
+               back:[""],
+               database:[""]},
+descripcion:"Pagina para el consumo de servicios de API y filtro por nombre de productos​",
+Utilidades:[
+  "Consumo de informacion de API",
+  "Pagina Platzi(https://api.escuelajs.co/api/v1/products)",
+  "Paginacion de los productos en listas por 8",
+  "Filtro de productos por nombre"
+
+],
+frontend:"https://github.com/JesusOsorioJ/Dreadful",
+backend:null,
+webpage:"https://dreaful.vercel.app/",
+imageswebpages:[
+  {name:"pagination",des:"Paginacion de productos por 8 items"},
+  {name:"filter",des:"Pagina para filtro de pagina"},
+  {name:"landing",des:"Landing page, link por movies y series"},
+  {name:"filter1",des:"Filtro de productos por productos"},
+  
+],
+videopage:null
+},
   
 ]
 
