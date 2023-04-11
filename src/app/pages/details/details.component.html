@@ -4,26 +4,30 @@
   <div class=" sm:px-6 py-16  ">
 
     <!-- Name of proyect -->
+   
+
     <div
       class="mx-10 lg:mx-0  max-w-2xl px-15 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:gap-x-8 lg:px-15 ">
       <div class="lg:col-span-2  lg:pr-8">
-        <h1 class="text-2xl font-bold tracking-tight text-gray-400 sm:text-3xl">{{data[step].name}}</h1>
+        <p class="text-2xl font-bold tracking-tight text-gray-400 sm:text-3xl">{{data[step].name}}</p>
       </div>
 
       <!-- Carrusel and Link to Backend and Fronted -->
       <div class="mt-4   lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
         <app-carrusel [step]="step"></app-carrusel>
-        <div class="flex flex-row flex-wrap gap-x-12">
+        <div class="flex flex-row flex-wrap gap-x-8 mt-6">
           <a href="{{data[step].webpage}}"
-            class=" max-w-fit no-underline mt-10 flex-3 w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Ir
-            a pagina web</a>
+            class=" flex mt-4 w-44 h-11 items-center justify-center rounded-md border border-transparent bg-indigo-600   text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            <app-iconsvg iconname="webpage"/> Pagina web</a>
           <a *ngIf="data[step].frontend!=null" href="{{data[step].frontend}}"
-            class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Frontend</a>
+            class="flex  mt-4 w-44 h-11  items-center justify-center rounded-md border border-transparent bg-indigo-400  text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            <app-iconsvg iconname="front"/> Frontend</a>
           <a *ngIf="data[step].backend!=null" href="{{data[step].backend}}"
-            class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-indigo-400 py-3 px-8 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Backend</a>
+            class="flex  mt-4 w-44 h-11 items-center justify-center rounded-md border border-transparent bg-indigo-400 text-base font-medium text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            <app-iconsvg iconname="back"/> Backend</a>
           <a *ngIf="data[step].videopage!=null" href="{{data[step].videopage}}"
-            class="max-w-fit no-underline mt-10 flex-1 w-full items-center justify-center rounded-md border border-transparent bg-cyan-600 py-3 px-8 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Video
-            Web</a>
+            class="flex  mt-4 w-44 h-11  items-center justify-center rounded-md border border-transparent bg-cyan-600 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            <app-iconsvg iconname="youtube"/>Video Web</a>
         </div>
       </div>
       <div class="py-10 lg:col-span-1 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8">
@@ -35,7 +39,7 @@
         </div>
 
         <div class="mt-4">
-          <h3 class="text-sm font-medium text-gray-200">PARTICIPANTES</h3>
+          <p class="text-base font-medium text-gray-200">PARTICIPANTES</p>
           <div class="mt-1">
             <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
               <li *ngFor="let util of data[step].Integrantes" class="text-gray-300 font-bold">
@@ -48,7 +52,7 @@
 
         <div class=" mt-4 flex flex-row flex-wrap">
           <div *ngIf="(data[step].herramientas.front[0]).length!=0">
-            <h2 class="text-sm font-font text-gray-200">Frontend</h2>
+            <p class="text-base font-font text-gray-200">Frontend</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.front" title={{util}}
                 class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-6 w-auto sm:h-6"
@@ -57,7 +61,7 @@
           </div>
 
           <div *ngIf="(data[step].herramientas.back[0]).length!=0">
-            <h2 class="text-sm  font-font text-gray-200">Backend</h2>
+            <p class="text-base  font-font text-gray-200">Backend</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.back" title={{util}}
                 class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6"
@@ -66,9 +70,17 @@
 
           </div>
           <div *ngIf="(data[step].herramientas.database[0]).length!=0">
-            <h2 class="text-sm font-font text-gray-200">DB</h2>
+            <p class="text-base font-font text-gray-200">DB</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.database" title={{util}}
+                class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6"
+                src="../../../assets/icons/{{util}}.JPG" alt="">
+            </div>
+          </div>
+          <div *ngIf="(data[step].herramientas.test[0]).length!=0">
+            <p class="text-base font-font text-gray-200">Test</p>
+            <div class="flex flex-row">
+              <img *ngFor="let util of data[step].herramientas.test" title={{util}}
                 class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6"
                 src="../../../assets/icons/{{util}}.JPG" alt="">
             </div>
@@ -76,7 +88,7 @@
         </div>
 
         <div class="mt-4">
-          <h3 class="text-sm font-medium text-gray-200">UTILIDADES</h3>
+          <p class="text-base font-medium text-gray-200">UTILIDADES</p>
           <div class="mt-4 group hover-group:scale-150">
             <ul role="list" class="list-disc space-y-2 pl-4 text-sm ">
               <li *ngFor="let util of data[step].Utilidades" class="text-gray-200">

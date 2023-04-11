@@ -13,16 +13,18 @@ export var databases = [
       all: ["javascript", "react", "sass", "redux", "socket", "node", "sendgrid", "cloudinary", "stripe", "mongodb", "express"],
       front: ["react", "redux", "sass", "javascript", "socket"],
       back: ["node", "sendgrid", "cloudinary", "stripe"],
-      database: ["mongodb"]
+      database: ["mongodb"], test:["jest","cypress"]
     },
     descripcion: "Pagina intermediadora entre profesionales especializados y clientes, en labores domesticas como electrica, plomeria, mecanica, entre otras.​",
     Utilidades: [
-      "Inicio de sesion con encriptacion (jwt)",
+      "Inicio de sesion con encriptacion (Jwt)",
       "Filtro de profesional por categorias",
       "Envio de correo de autenticacion de usuario",
       "Envio de imagenes con Cloudinary",
-      "Chat en tiempo real",
-      "Pasarela de pago",
+      "Chat en tiempo real (socket)",
+      "Pasarela de pago (stripe)",
+      "Testing unitario y funcional (cypress, jest)",
+      "Uso de herramientas SCRUM (Jira) y Figma "
     ],
     backend: "https://github.com/JesusOsorioJ/Quick-call-Backend",
     frontend: "https://github.com/Luis-S-S/quick-call",
@@ -47,13 +49,14 @@ export var databases = [
       all: ["javascript", "react", "sass", "redux", "reactrouter", "firebase", "fbauthentication", "express"],
       front: ["react", "sass", "redux", "javascript", "reactrouter"],
       back: [""],
-      database: ["firebase", "fbauthentication"]
+      database: ["firebase", "fbauthentication"], test:[""]
     },
     descripcion: "Mi app es una pagina que ofrece a los estudiantes y profesores una herramienta para poder hacer test en línea. La plataforma permite la gestión de cursos y test de forma simultanea.",
-    Utilidades: ["Inicio de sesion con encriptacion (jwt)",
-      "creacin y gestion de test en linea",
-      "creacion y gestion de curso en linea",
-      "Posibilidad de gestionar test en vivo o con tiempo"
+    Utilidades: ["Inicio de sesion con encriptacion (Jwt)",
+      "Creacion y gestion de test en linea",
+      "Creacion y gestion de curso en linea",
+      "Posibilidad de gestionar test en vivo o con tiempo",
+      "Uso de herramientas SCRUM (Jira) y Figma "
     ],
     backend: null,
     frontend: "https://github.com/JesusOsorioJ/my-app",
@@ -79,7 +82,7 @@ export var databases = [
       all: ["typescript", "angular", "tailwind", "gsap", "scrolltrigger"],
       front: ["angular", "tailwind", "typescript", "gsap", "scrolltrigger"],
       back: [""],
-      database: [""]
+      database: [""], test:[""]
     },
     descripcion: "Empresa privada consultora de archivos, bibliotecas y centro de documentación, orientada a brindar capacitaciones y asesorías.​",
     Utilidades: [
@@ -111,7 +114,7 @@ export var databases = [
       all: ["nextjs", "typescript", "tailwind","prisma","reacthookform","eslint","postgresql"],
       front: ["nextjs", "typescript", "tailwind","reacthookform","eslint"],
       back: ["prisma"],
-      database: ["postgresql"]
+      database: ["postgresql"], test:[""]
     },
     descripcion: "TestEnglish es una pagina donde podras evaluar tu vocabulario en ingles con palabras de diferentes categorias.​",
     Utilidades: [
@@ -142,8 +145,8 @@ export var databases = [
     herramientas: {
       all: ["javascript", "react", "sass", "redux", "node", "express", "nodemon", "mongodb"],
       front: ["react", "sass", "javascript", "redux"],
-      back: ["node", "express", "nodemon"],
-      database: ["mongodb"]
+      back: ["node", "nodemon", "express"],
+      database: ["mongodb"], test:[""]
     },
     descripcion: "Pagina intermediadora entre profesionales especialidados y clientes, en labores domesticas como electricos, plomeria, mecanico, entre otras.​",
     Utilidades: [
@@ -173,7 +176,7 @@ export var databases = [
       all: ["graphql", "node", "express", "nodemon", "mongodb"],
       front: [""],
       back: ["graphql", "node", "express", "nodemon"],
-      database: ["mongodb"]
+      database: ["mongodb"], test:[""]
     },
     descripcion: "backend con uso de graphQl para la creacion y consumo de informacion de base de datos en mongoDB​",
     Utilidades: [
@@ -209,7 +212,7 @@ export var databases = [
       all: ["angular", "typescript", "tailwind"],
       front: ["angular", "typescript", "tailwind"],
       back: [""],
-      database: [""]
+      database: [""], test:[""]
     },
     descripcion: "Pagina para el consumo de servicios de API y filtro por nombre de productos​",
     Utilidades: [
@@ -229,7 +232,7 @@ export var databases = [
       { name: "filter1", des: "Filtro de productos por productos" },
 
     ],
-    videopage: null
+    videopage: null, test:[""]
   },
   {
     no: 7,
@@ -242,7 +245,7 @@ export var databases = [
       all: ["nextjs", "javascript", "tailwind", "mysql"],
       front: ["nextjs", "javascript", "tailwind"],
       back: [""],
-      database: ["mysql"]
+      database: ["mysql"], test:[""]
     },
     descripcion: "Pagina nextjs creacion backend/frontend para creacion de API CRUD​",
     Utilidades: [

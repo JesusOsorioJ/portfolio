@@ -17,9 +17,10 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { IntroballComponent } from './components/introball/introball.component';
-import { PortafolioComponent } from './components/portafolio/portafolio.component';
 import { InputComponent } from './components/input/input.component';
 import { NameComponent } from './components/name/name.component';
+import { TargetComponent } from './components/target/target.component';
+import { IconsvgComponent } from './components/iconsvg/iconsvg.component';
 
 
 @NgModule({
@@ -31,9 +32,10 @@ declarations: [
     FooterComponent,
     HeaderComponent,
     IntroballComponent,
-    PortafolioComponent,
     InputComponent,
-    NameComponent
+    NameComponent,
+    TargetComponent,
+    IconsvgComponent
   ],
   imports: [
     BrowserModule,
