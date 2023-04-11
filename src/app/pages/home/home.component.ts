@@ -89,16 +89,3 @@ export class HomeComponent {
   
 }
 
-// gsap.to("#names1", {display:"flex",delay:3.50})
-// gsap.to("#names",0.2, {top:'45vh',color:"black",left:'40vw'})
-// gsap.to("#names", 0.2, {y:'45vh',color:"black",x:'45vw', delay:3.70,})    
-// gsap.to("#names", 0.2, {y:'48vh', stagger:.1, ease:"power1.inOut",delay:3.8})
-// gsap.to("#names", 0.3, {y:'40vh', stagger:.1, fontFamily: "SegoeUI", ease:"power1.out",delay:4.0 })
-// gsap.to("#names", 0.3, {y:'45vh', stagger:.1, ease:"power1.in",delay:4.3 })
-// gsap.to("#names", 0.2, {y:'50vh', ease:"power1.inOut",delay:6.0})
-// gsap.to("#names", 0.4, {y:'10vh', delay:6.2})
-// gsap.to("#names", 0.4, {y:'10vh', delay:6.2,color:"white"})
-// gsap.to("#names1",0.01, {display:"none",delay:7.0})
-// gsap.to("#home",0.01, {display:"block",delay:7.0})
-//   gsap.to("#palabra1",0, {color:"white"})
-//   gsap.to("#palabra1",5, {color:"#4B5563",yoyo:true, repeat:1})
