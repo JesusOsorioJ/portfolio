@@ -4,16 +4,16 @@ export var databases = [
     no: 0,
     name: "Quick call",
     url: "quickcall",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Luis Alberto Salas", linkedin: "https://www.linkedin.com/in/luis-salcedo-salas/" },
       { rol: "Desarollador", name: "Francisco Huertas Cruz", linkedin: "https://www.linkedin.com/in/francisco-huertas-cruz/" },
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
-    ],
+    ], funciones: [],
     herramientas: {
       all: ["javascript", "react", "sass", "redux", "socket", "node", "sendgrid", "cloudinary", "stripe", "mongodb", "express"],
       front: ["react", "redux", "sass", "javascript", "socket"],
       back: ["node", "sendgrid", "cloudinary", "stripe"],
-      database: ["mongodb"], test:["jest","cypress"]
+      database: ["mongodb"], test: ["jest", "cypress"]
     },
     descripcion: "Pagina intermediadora entre profesionales especializados y clientes, en labores domesticas como electrica, plomeria, mecanica, entre otras.​",
     Utilidades: [
@@ -42,9 +42,9 @@ export var databases = [
     no: 1,
     name: "Mi app",
     url: "miapp",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" }
-    ],
+    ], funciones: [],
     herramientas: {
       all: ["javascript", "react", "sass", "redux", "reactrouter", "firebase", "fbauthentication", "express"],
       front: ["react", "sass", "redux", "javascript", "reactrouter"],
@@ -72,17 +72,63 @@ export var databases = [
   },
   {
     no: 2,
-    name: "ArchiBige Doc",
-    url: "archibige",
-    Integrantes: [
-      { rol: "Empresa", name: "Ilia Sofia Castilla", linkedin: "" },
+    name: "Maker Hub",
+    url: "makerhub",
+    integrantes: [
+      { rol: "Desarollador", name: "German Escobar ", linkedin: "https://www.linkedin.com/in/germanescobar/" },
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
     ],
+    funciones:
+      ["Creacion de frontend vistas (Admin, Admindetails y Home)",
+        "Creacion de componentes y subvistas (Login, Delete, Create and Update modal) ",
+        "Implementacion de typeScript (Interface, Type y InitialValue)",
+        "Creacion de servicios applicationlog, application y user",
+        "Implementacion de Prisma y conexion DB (Backend)",
+        "Config para Migracion y Seeding inicial para modo desarrollo (Libreria faker)",
+        "Creacion de endpoint y funciones para uso de Prisma con conexion PostgreSQL "
+      ],
+    herramientas: {
+      all: ["vite", "bootstrap", "reactrouter","prisma", "node", "express", "typescript"],
+      front: ["vite", "bootstrap", "reactrouter"],
+      back: ["prisma", "typescript", "express", "node"],
+      database: ["postgresql"], test: [""]
+    },
+    descripcion:
+      "Pagina creada para la gestion de las solicitudes de empleo de los estudiantes de Make It Real ​",
+    Utilidades: [
+      "Login de usuarios (MAKER, ADMIN)",
+      "Gestion de aplicaciones por parte de maker (CRUD)",
+      "Filtros admin queryParams por status, name, email, cohort",
+      "Gestion de maker por parte de Administrador (CRUD)",
+      "Implementacion de prisma"
+    ],
+    backend: null,
+    frontend: null,
+    webpage: null,
+    videopage: null,
+    imageswebpages: [
+      { name: "login", des: "Login (maker, administrador)" },
+      { name: "makerview", des: "Vista maker: Aplicaciones por maker y status" },
+      { name: "makernew", des: "Modal para creacion de aplicacion" },
+      { name: "makerupdate", des: "Modal para ver y modificar aplicacion" },
+      { name: "admindetails", des: "Vista admin: Detalle maker por ID" },
+      { name: "adminUpdate", des: "Formulario para actualizar maker" },
+      { name: "adminview", des: "Vista admin: Gestion de maker" },
+      { name: "delete", des: "Modal delete maker o aplicacion" },]
+  },
+  {
+    no: 3,
+    name: "ArchiBige Doc",
+    url: "archibige",
+    integrantes: [
+      { rol: "Empresa", name: "Ilia Sofia Castilla", linkedin: "" },
+      { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
+    ], funciones: [],
     herramientas: {
       all: ["typescript", "angular", "tailwind", "gsap", "scrolltrigger"],
       front: ["angular", "tailwind", "typescript", "gsap", "scrolltrigger"],
       back: [""],
-      database: [""], test:[""]
+      database: [""], test: [""]
     },
     descripcion: "Empresa privada consultora de archivos, bibliotecas y centro de documentación, orientada a brindar capacitaciones y asesorías.​",
     Utilidades: [
@@ -104,17 +150,17 @@ export var databases = [
     videopage: null
   },
   {
-    no: 3,
+    no: 4,
     name: "Test English",
     url: "testenglish",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
-    ],
+    ], funciones: [],
     herramientas: {
-      all: ["nextjs", "typescript", "tailwind","prisma","reacthookform","eslint","postgresql"],
-      front: ["nextjs", "typescript", "tailwind","reacthookform","eslint"],
+      all: ["nextjs", "typescript", "tailwind", "prisma", "reacthookform", "eslint", "postgresql"],
+      front: ["nextjs", "typescript", "tailwind", "reacthookform", "eslint"],
       back: ["prisma"],
-      database: ["postgresql"], test:[""]
+      database: ["postgresql"], test: [""]
     },
     descripcion: "TestEnglish es una pagina donde podras evaluar tu vocabulario en ingles con palabras de diferentes categorias.​",
     Utilidades: [
@@ -136,17 +182,17 @@ export var databases = [
     videopage: null
   },
   {
-    no: 4,
+    no: 5,
     name: "Mega Tv",
     url: "megatv",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
-    ],
+    ], funciones: [],
     herramientas: {
       all: ["javascript", "react", "sass", "redux", "node", "express", "nodemon", "mongodb"],
       front: ["react", "sass", "javascript", "redux"],
       back: ["node", "nodemon", "express"],
-      database: ["mongodb"], test:[""]
+      database: ["mongodb"], test: [""]
     },
     descripcion: "Pagina intermediadora entre profesionales especialidados y clientes, en labores domesticas como electricos, plomeria, mecanico, entre otras.​",
     Utilidades: [
@@ -166,17 +212,17 @@ export var databases = [
     videopage: null
   },
   {
-    no: 5,
+    no: 6,
     name: "Backend GraphQl",
     url: "graphql",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
-    ],
+    ], funciones: [],
     herramientas: {
       all: ["graphql", "node", "express", "nodemon", "mongodb"],
       front: [""],
       back: ["graphql", "node", "express", "nodemon"],
-      database: ["mongodb"], test:[""]
+      database: ["mongodb"], test: [""]
     },
     descripcion: "backend con uso de graphQl para la creacion y consumo de informacion de base de datos en mongoDB​",
     Utilidades: [
@@ -202,17 +248,17 @@ export var databases = [
     videopage: null
   },
   {
-    no: 6,
+    no: 7,
     name: "Dreadful",
     url: "dreadful",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
-    ],
+    ], funciones: [],
     herramientas: {
       all: ["angular", "typescript", "tailwind"],
       front: ["angular", "typescript", "tailwind"],
       back: [""],
-      database: [""], test:[""]
+      database: [""], test: [""]
     },
     descripcion: "Pagina para el consumo de servicios de API y filtro por nombre de productos​",
     Utilidades: [
@@ -232,20 +278,20 @@ export var databases = [
       { name: "filter1", des: "Filtro de productos por productos" },
 
     ],
-    videopage: null, test:[""]
+    videopage: null, test: [""]
   },
   {
-    no: 7,
+    no: 8,
     name: "Crud Nextjs",
     url: "crudnext",
-    Integrantes: [
+    integrantes: [
       { rol: "Desarollador", name: "Jesus Osorio Jimenez", linkedin: "https://www.linkedin.com/in/jesus-david-osorio-jimenez/" },
-    ],
+    ], funciones: [],
     herramientas: {
       all: ["nextjs", "javascript", "tailwind", "mysql"],
       front: ["nextjs", "javascript", "tailwind"],
       back: [""],
-      database: ["mysql"], test:[""]
+      database: ["mysql"], test: [""]
     },
     descripcion: "Pagina nextjs creacion backend/frontend para creacion de API CRUD​",
     Utilidades: [

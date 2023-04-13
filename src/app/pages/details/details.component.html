@@ -1,11 +1,11 @@
 <app-header></app-header>
+<app-carrusel *ngIf="viewzoom==true" [step]="step" [zoom]="viewzoom"></app-carrusel>
+
 <div class=" bg-[#0a192f]">
-  
   <div class=" sm:px-6 py-16  ">
 
     <!-- Name of proyect -->
-   
-
+ 
     <div
       class="mx-10 lg:mx-0  max-w-2xl px-15 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:gap-x-8 lg:px-15 ">
       <div class="lg:col-span-2  lg:pr-8">
@@ -14,9 +14,14 @@
 
       <!-- Carrusel and Link to Backend and Fronted -->
       <div class="mt-4   lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
-        <app-carrusel [step]="step"></app-carrusel>
+        <div class="flex justify-end">
+          <button (click)="zoom()"
+          class="flex w-32 h-8  items-center justify-center rounded-md border border-transparent bg-cyan-600 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          <app-iconsvg iconname="expand"/>Expandir</button>
+        </div>
+        <app-carrusel *ngIf="viewzoom==false" [step]="step" [zoom]="viewzoom"/>
         <div class="flex flex-row flex-wrap gap-x-8 mt-6">
-          <a href="{{data[step].webpage}}"
+          <a *ngIf="data[step].webpage!=null"  href="{{data[step].webpage}}"
             class=" flex mt-4 w-44 h-11 items-center justify-center rounded-md border border-transparent bg-indigo-600   text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
             <app-iconsvg iconname="webpage"/> Pagina web</a>
           <a *ngIf="data[step].frontend!=null" href="{{data[step].frontend}}"
@@ -42,7 +47,7 @@
           <p class="text-base font-medium text-gray-200">PARTICIPANTES</p>
           <div class="mt-1">
             <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-              <li *ngFor="let util of data[step].Integrantes" class="text-gray-300 font-bold">
+              <li *ngFor="let util of data[step].integrantes" class="text-gray-300 font-bold">
                 <span class="text-gray-300">{{util.rol}} : </span>
                 <a href="{{util.linkedin}}" class="no-underline font-normal text-gray-300">{{util.name}}</a>
               </li>
@@ -50,8 +55,19 @@
           </div>
         </div>
 
+        <div *ngIf="data[step].funciones.length!=0" class="mt-4">
+          <p class="text-base font-medium text-gray-200">FUNCIONES</p>
+          <div class="mt-1">
+            <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+              <li *ngFor="let util of data[step].funciones" class="text-gray-200">
+                <span class="text-gray-300">{{util}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+       
         <div class=" mt-4 flex flex-row flex-wrap">
-          <div *ngIf="(data[step].herramientas.front[0]).length!=0">
+          <div *ngIf="(data[step].herramientas.front[0]).length!=0&&viewzoom==false">
             <p class="text-base font-font text-gray-200">Frontend</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.front" title={{util}}
@@ -60,7 +76,7 @@
             </div>
           </div>
 
-          <div *ngIf="(data[step].herramientas.back[0]).length!=0">
+          <div *ngIf="(data[step].herramientas.back[0]).length!=0&&viewzoom==false">
             <p class="text-base  font-font text-gray-200">Backend</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.back" title={{util}}
@@ -69,7 +85,7 @@
             </div>
 
           </div>
-          <div *ngIf="(data[step].herramientas.database[0]).length!=0">
+          <div *ngIf="(data[step].herramientas.database[0]).length!=0&&viewzoom==false">
             <p class="text-base font-font text-gray-200">DB</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.database" title={{util}}
@@ -77,7 +93,7 @@
                 src="../../../assets/icons/{{util}}.JPG" alt="">
             </div>
           </div>
-          <div *ngIf="(data[step].herramientas.test[0]).length!=0">
+          <div *ngIf="(data[step].herramientas.test[0]).length!=0&&viewzoom==false">
             <p class="text-base font-font text-gray-200">Test</p>
             <div class="flex flex-row">
               <img *ngFor="let util of data[step].herramientas.test" title={{util}}

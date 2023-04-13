@@ -9,14 +9,16 @@ SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 
 @Component({
   selector: 'app-carrusel',
-  templateUrl: './carrusel.component.html'
+  templateUrl: './carrusel.component.html',
+  
 })
-export class CarruselComponent implements OnInit {
+export class CarruselComponent {
 
   @Input() step : number = 0;
+  @Input() zoom : boolean = false;
+  viewzoom : boolean = false;
   data = databases
   
-  ngOnInit() {
-    
-  }
+  
+
 }
