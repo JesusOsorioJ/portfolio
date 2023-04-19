@@ -72,7 +72,7 @@ export var databases = [
   },
   {
     no: 2,
-    name: "Maker Hub",
+    name: "Maker Hub (en desarrollo)",
     url: "makerhub",
     integrantes: [
       { rol: "Desarollador", name: "German Escobar ", linkedin: "https://www.linkedin.com/in/germanescobar/" },
