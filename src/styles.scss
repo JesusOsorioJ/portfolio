@@ -2,7 +2,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'swiper/swiper-bundle';
+@import 'swiper/css/bundle';
 
 
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --background-color: #0a192f;
+  --background-colorLabel: #020813;
+  --text-colorLabel: #a8b2d1;
+  --text-color: #D3D3D3;
+  --text-colorTitle: #a8b2d1;
+}
+  
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --background-colorLabel: #020813;
+  --text-colorLabel: #a8b2d1;
+  --text-color: #050d24;
+  --text-colorTitle: #253257;
+}
+  
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

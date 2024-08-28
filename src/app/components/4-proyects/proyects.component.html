@@ -1,11 +1,11 @@
-<div id="proyectos" class=" bg-[#0a192f] ">
+<div id="proyects">
   <div class="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:max-w-none lg:py-10">
-      <p class="text-2xl font-bold text-[#D3D3D3]">Mis proyectos</p>
+      <p class="text-4xl">{{"myProjects" | translate}}</p>
       <form class="example-form">
         <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label> Filtrar</mat-label>
-          <input type="text" placeholder="Seleccionar" aria-label="Herramientas" matInput [formControl]="myControl"
+          <mat-label>{{"filter" | translate}}</mat-label>
+          <input type="text" [attr.placeholder]="'filter' | translate" aria-label="Herramientas" matInput [formControl]="myControl"
             [matAutocomplete]="auto" (keydown.enter)="onSubmit()">
           <mat-autocomplete #auto="matAutocomplete">
             <mat-option *ngFor="let option of filteredOptions | async" [value]="option" on>
@@ -14,22 +14,20 @@
           </mat-autocomplete>
         </mat-form-field>
       </form>
-      <div *ngIf="data.length<5" class="text-small text-white">Filtrado por {{valueObjet1}}</div>
+      <div *ngIf="data.length<5" class="text-small">{{"filteredBy" | translate}} {{valueObjet1}}</div>
       <div id="target1" class="mt-6  flex flex-wrap justify-around gap-x-4 gap-y-6 lg:space-y-0 ">
         <a id="target" *ngFor="let date of data" href="details/{{date.url}}" 
-        class="relative items-end  overflow-hidden group block w-72 h-64 ">
+        class="relative items-end  overflow-hidden group block w-72 h-64 rounded-md">
           <div class="absolute bottom-0 left-0 flex flex-col 
-               p-2 bg-[#0a192f] opacity-80 group-hover:flex z-10 w-full 
+               p-2 bg-backgroundLabel text-textColorLabel opacity-80 group-hover:flex z-10 w-full 
                translate-y-[70px] duration-700 group-hover:translate-y-0">
-            <p class="text-white text-lg font-semibold">{{date.name}}</p>
+            <p class="text-lg font-semibold">{{date.name}}</p>
             <!-- add ng-container -->
             <app-target [date]="date"/>
-
           </div>
           <img id="target" class="blur-lg h-full  bg-auto bg-no-repeat bg-center"
             src="../../../assets/photo/{{date.url}}/{{date.imageswebpages[0].name}}.png" style="filter: opacity(100%)">
         </a>
-
       </div>
     </div>
   </div>

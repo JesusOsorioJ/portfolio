@@ -6,8 +6,12 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      colors:{
-        success: colors.green
+      colors: {
+        background: 'var(--background-color)',
+        backgroundLabel : 'var(--background-colorLabel)',
+        textColorLabel : 'var(--text-colorLabel)',
+        textColor: 'var(--text-color)',
+        textColorTitle: 'var(--text-colorTitle)',
       }
     },
   },

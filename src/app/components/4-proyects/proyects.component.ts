@@ -4,10 +4,9 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { databases } from '../../pages/details/database'
 
-
 @Component({
   selector: 'app-input',
-  templateUrl: './input.component.html'
+  templateUrl: './proyects.component.html'
 })
 export class InputComponent implements OnInit {
   data = databases
@@ -23,7 +22,7 @@ export class InputComponent implements OnInit {
     this.valueObjet1 = this.valueObjet
     this.data = []
     for (let i of databases){
-      for (let j of i.herramientas.all) {
+      for (let j of i.technologies.all) {
         if (j == this.valueObjet){
           this.data=[...this.data, i]
         }
@@ -32,14 +31,12 @@ export class InputComponent implements OnInit {
     if (this.valueObjet.length == 0){this.data = databases}
   }
   
-
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || '')),
     );
   }
-
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();

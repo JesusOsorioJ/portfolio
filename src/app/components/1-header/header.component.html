@@ -1,0 +1,33 @@
+<div 
+  id="header" 
+  class="flex justify-between items-center w-full fixed z-50 bg-backgroundLabel text-textColorLabel px-4"
+>
+  <a href="/">
+    <app-iconsvg class="text-textColorLabel hover:text-background" iconname="portfolio" />
+  </a>
+  <div class="flex items-center h-full">
+    <a 
+      *ngFor="let palabra of link; index as i" href={{palabra.href}}
+      class="hidden sm:flex items-center py-[21px] px-2 hover:bg-textColorLabel hover:text-backgroundLabel rounded-sm" 
+    >
+      <app-iconsvg iconname={{palabra.iconname}} />
+      <div>{{ palabra.translate | translate }}</div>
+    </a>
+    <div class="flex flex-col items-center gap-1 px-2">
+      <button (click)="switchLanguage('es')" [ngClass]="{'bg-textColorLabel text-backgroundLabel p-1 rounded-md': language === 'es'}">Español</button>
+      <button (click)="switchLanguage('en')" [ngClass]="{'bg-textColorLabel text-backgroundLabel p-1 rounded-md': language === 'en'}">English</button>
+    </div>
+    <div class="flex flex-col items-center justify-center px-2">
+      <button 
+        (click)="switchTheme()"  
+        class="flex w-12 p-1 border border-colorLabel h-fit rounded-2xl bg-background"
+        [ngClass]="{'justify-start ': themeValue === 'light', 'justify-end': themeValue !== 'light'}"
+      >
+        <div class="bg-textColor h-5 w-5 rounded-full"></div>
+      </button>
+      <div class="text-[12px]">
+        {{ themeValue === 'light' ? ('lightMode' | translate) : ('darkMode' | translate) }}
+      </div>
+    </div>
+  </div>
+</div>

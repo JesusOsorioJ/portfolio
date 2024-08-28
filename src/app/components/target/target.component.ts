@@ -5,5 +5,5 @@ import { Component,Input } from '@angular/core';
   templateUrl: './target.component.html'
 })
 export class TargetComponent {
-  @Input() date = {herramientas:{front:[""],back:[""],database:[""],test:[""]}};
+  @Input() date = {technologies:{front:[""],back:[""],database:[""],test:[""]}};
 }
