@@ -1,26 +1,27 @@
 <div class="flex flex-row flex-wrap">
-  <div *ngIf="date.technologies.front[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
-    <p>Front</p>
+  <div *ngIf="date.technologies.front[0]!.length!=0" class="mx-1 mt-2 flex flex-col gap-1 border-r border-gray-600">
+    <div>Front</div>
     <div class="flex">
-      <img  *ngFor="let i of [0,1]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.technologies.front[i]}}.JPG" alt=""> 
+      <app-toolsvg *ngFor="let i of [0,1]" class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.front[i] }}" size="30px" />
     </div>
   </div>
   <div *ngIf="date.technologies.back[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
-    <p>Back</p>
+    <div>Back</div>
     <div class="flex">
-      <img  *ngFor="let i of [0,1]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.technologies.back[i]}}.JPG" alt=""> 
+      <app-toolsvg *ngFor="let i of [0,1]" class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.back[i] }}" size="30px" />
     </div>
   </div>
+
   <div *ngIf="date.technologies.database[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
-    <p>DB</p>
+    <div>DB</div>
     <div class="flex">
-      <img  *ngFor="let i of [0]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.technologies.database[i]}}.JPG" alt=""> 
+      <app-toolsvg class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.database[0] }}" size="30px" />
     </div>
   </div>
   <div *ngIf="date.technologies.test[0]!.length!=0" class="mx-1 mt-2 flex flex-col ">
-    <p>Test</p>
+    <div>Test</div>
     <div class="flex">
-      <img  *ngFor="let i of [0]" class="mr-2 rounded-full h-7 w-auto sm:h-6" src="../../../assets/icons/{{date.technologies.test[i]}}.JPG" alt=""> 
+      <app-toolsvg class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.test[0] }}" size="30px" />
     </div>
   </div>
 </div>

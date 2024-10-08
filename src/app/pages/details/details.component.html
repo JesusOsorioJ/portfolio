@@ -1,109 +1,211 @@
 <div class="bg-background text-justify">
   <app-header></app-header>
-  <app-carrusel *ngIf="viewzoom==true" [step]="step" [zoom]="viewzoom"></app-carrusel>
-  <div class=" sm:px-6 pt-24">
+  <app-carrusel
+    *ngIf="viewzoom == true"
+    [step]="step"
+    [zoom]="viewzoom"
+  ></app-carrusel>
+  <div class="sm:px-6 pt-24">
     <!-- Name of proyect -->
     <div
-      class="mx-10 lg:mx-0  max-w-2xl px-15 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:gap-x-8 lg:px-15 ">
-      <div class="lg:col-span-2  lg:pr-8">
-        <p class="text-2xl font-bold tracking-tight sm:text-3xl">{{data[step].name}}</p>
-      </div>
+      class="mx-10 lg:mx-0 max-w-2xl px-15 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:gap-x-8 lg:px-15"
+    >
       <!-- Carrusel and Link to Backend and Fronted -->
-      <div class="mt-4   lg:row-span-3 lg:mt-0  lg:col-start-2 lg:col-span-2">
-        <app-carrusel *ngIf="viewzoom==false" [step]="step" [zoom]="viewzoom"/>
+      <div class="mt-4 lg:row-span-3 lg:mt-0 lg:col-start-2 lg:col-span-2">
+        <app-carrusel
+          *ngIf="viewzoom == false"
+          [step]="step"
+          [zoom]="viewzoom"
+        />
         <div class="flex flex-row flex-wrap gap-5 text-white">
-          <button (click)="zoom()"
-            class="flex px-5 h-11 items-center justify-center rounded-md bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <app-iconsvg iconname="expand"/>{{ "expand" | translate }}
+          <button
+            (click)="zoom()"
+            class="flex px-5 h-11 items-center justify-center rounded-md bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            <app-iconsvg iconname="expand" />{{ "expand" | translate }}
           </button>
-          <a *ngIf="data[step].webpage!=null" href="{{data[step].webpage}}" class="flex px-5 h-11 items-center justify-center rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <app-iconsvg iconname="webpage"/>{{"webPage" | translate}}
+          <a
+            *ngIf="data[step].webpage != null"
+            href="{{ data[step].webpage }}"
+            class="flex px-5 h-11 items-center justify-center rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            <app-iconsvg iconname="webpage" />{{ "webPage" | translate }}
           </a>
-          <a *ngIf="data[step].frontend!=null" href="{{data[step].frontend}}" class="flex px-5 h-11 items-center justify-center rounded-md bg-indigo-400  hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <app-iconsvg iconname="front"/>Frontend
+          <a
+            *ngIf="data[step].frontend != null"
+            href="{{ data[step].frontend }}"
+            class="flex px-5 h-11 items-center justify-center rounded-md bg-indigo-400 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            <app-iconsvg iconname="front" />Frontend
           </a>
-          <a *ngIf="data[step].backend!=null" href="{{data[step].backend}}" class="flex px-5 h-11 items-center justify-center rounded-md bg-indigo-400 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <app-iconsvg iconname="back"/>Backend
+          <a
+            *ngIf="data[step].backend != null"
+            href="{{ data[step].backend }}"
+            class="flex px-5 h-11 items-center justify-center rounded-md bg-indigo-400 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            <app-iconsvg iconname="back" />Backend
           </a>
-          <a *ngIf="data[step].videopage!=null" href="{{data[step].videopage}}" class="flex px-5 h-11 items-center justify-center rounded-md bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-            <app-iconsvg iconname="youtube"/>Video Web
+          <a
+            *ngIf="data[step].videopage != null"
+            href="{{ data[step].videopage }}"
+            class="flex px-5 h-11 items-center justify-center rounded-md bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          >
+            <app-iconsvg iconname="youtube" />Video Web
           </a>
         </div>
+        <div class="mt-4 flex flex-row flex-wrap gap-2">
+          <div
+            *ngIf="
+              data[step].technologies.front[0].length != 0 && viewzoom == false
+            "
+          >
+            <p class="text-base font-bold text-textColorTitle">Frontend</p>
+            <div class="flex flex-row">
+              <div
+                *ngFor="let util of data[step].technologies.front"
+                class="flex flex-col items-center group grayscale mx-2 hover:grayscale-0 hover:scale-125 transition duration-600 ease-in-out"
+              >
+                <app-toolsvg iconname="{{ util }}" size="30px" />
+                <p
+                  class="text-xs text-transparent group-hover:text-textColor capitalize break-works max-w-[40px]"
+                >
+                  {{ util }}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngIf="
+              data[step].technologies.back[0].length != 0 && viewzoom == false
+            "
+          >
+            <p class="text-base font-bold text-textColorTitle">Backend</p>
+            <div class="flex flex-row">
+              <div
+                *ngFor="let util of data[step].technologies.back"
+                class="flex flex-col items-center group grayscale mx-2 hover:grayscale-0 hover:scale-125 transition duration-600 ease-in-out"
+              >
+                <app-toolsvg iconname="{{ util }}" size="30px" />
+                <p
+                  class="text-xs text-transparent group-hover:text-textColor capitalize break-works max-w-[40px]"
+                >
+                  {{ util }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              data[step].technologies.database[0].length != 0 &&
+              viewzoom == false
+            "
+          >
+            <p class="text-base font-bold text-textColorTitle">DB</p>
+            <div class="flex flex-row">
+              <div
+                *ngFor="let util of data[step].technologies.database"
+                class="flex flex-col items-center group grayscale mx-2 hover:grayscale-0 hover:scale-125 transition duration-600 ease-in-out"
+              >
+                <app-toolsvg iconname="{{ util }}" size="30px" />
+                <p
+                  class="text-xs text-transparent group-hover:text-textColor capitalize break-works max-w-[40px]"
+                >
+                  {{ util }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              data[step].technologies.test[0].length != 0 && viewzoom == false
+            "
+          >
+            <p class="text-base font-bold text-textColorTitle">Test</p>
+            <div class="flex flex-row">
+              <div
+                *ngFor="let util of data[step].technologies.test"
+                class="flex flex-col items-center group grayscale mx-2 hover:grayscale-0 hover:scale-125 transition duration-600 ease-in-out"
+              >
+                <app-toolsvg iconname="{{ util }}" size="30px" />
+                <p
+                  class="text-xs text-transparent group-hover:text-textColor capitalize break-works max-w-[40px]"
+                >
+                  {{ util }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="py-10 lg:col-span-1 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8">
+      
+      <div
+        class="py-10 lg:col-span-1 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8"
+      >
+      <div class="lg:col-span-2 lg:pr-8">
+        <p class="text-2xl font-bold tracking-tight sm:text-3xl">
+          {{ data[step].name }}
+        </p>
+      </div>
         <!-- Description and details -->
         <div>
           <div class="space-y-6">
-            <p class="text-sm">{{data[step].description | translate}}</p>
+            <p class="text-sm">
+              {{ data[step].url + "Description" | translate }}
+            </p>
           </div>
         </div>
 
         <div class="mt-4">
-          <p class="text-base font-bold text-textColorTitle">{{"participants" | translate}}</p>
+          <p class="text-base font-bold text-textColorTitle">
+            {{ "participants" | translate }}
+          </p>
           <div class="mt-1">
             <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-              <li *ngFor="let util of data[step].participants" class="font-bold hover:opacity-60">
-                <span>{{util.rol | translate}} : </span>
-                <a href="{{util.linkedin}}" class="no-underline font-normal">{{util.name}}</a>
+              <li
+                *ngFor="let util of data[step].participants"
+                class="font-bold hover:opacity-60"
+              >
+                <span>{{ util.rol | translate }} : </span>
+                <a
+                  href="{{ util.linkedin }}"
+                  class="no-underline font-normal"
+                  >{{ util.name }}</a
+                >
               </li>
             </ul>
           </div>
         </div>
 
-        <div *ngIf="data[step].responsibilities.length!=0" class="mt-4">
-          <p class="text-base font-bold text-textColorTitle">{{"responsibilities" | translate}}</p>
+        <div *ngIf="data[step].responsibilities.length != 0" class="mt-4">
+          <p class="text-base font-bold text-textColorTitle">
+            {{ "responsibilities" | translate }}
+          </p>
           <div class="mt-1">
             <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
-              <li *ngFor="let util of data[step].responsibilities">
-                <span>{{util | translate}}</span>
+              <li
+                *ngFor="let util of data[step].responsibilities; let i = index"
+              >
+                <span>{{
+                  data[step].url + "Responsibilities" + (i + 1) | translate
+                }}</span>
               </li>
             </ul>
           </div>
         </div>
-        
-        <div class=" mt-4 flex flex-row flex-wrap gap-2">
-          <div *ngIf="(data[step].technologies.front[0]).length!=0&&viewzoom==false">
-            <p class="text-base font-font">Frontend</p>
-            <div class="flex flex-row">
-              <img *ngFor="let util of data[step].technologies.front" title={{util}}
-                class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-6 w-auto sm:h-6"
-                src="../../../assets/icons/{{util}}.JPG" alt="">
-            </div>
-          </div>
-
-          <div *ngIf="(data[step].technologies.back[0]).length!=0&&viewzoom==false">
-            <p class="text-base  font-font">Backend</p>
-            <div class="flex flex-row">
-              <img *ngFor="let util of data[step].technologies.back" title={{util}}
-                class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6"
-                src="../../../assets/icons/{{util}}.JPG" alt="">
-            </div>
-
-          </div>
-          <div *ngIf="(data[step].technologies.database[0]).length!=0&&viewzoom==false">
-            <p class="text-base font-font">DB</p>
-            <div class="flex flex-row">
-              <img *ngFor="let util of data[step].technologies.database" title={{util}}
-                class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6"
-                src="../../../assets/icons/{{util}}.JPG" alt="">
-            </div>
-          </div>
-          <div *ngIf="(data[step].technologies.test[0]).length!=0&&viewzoom==false">
-            <p class="text-base font-font">Test</p>
-            <div class="flex flex-row">
-              <img *ngFor="let util of data[step].technologies.test" title={{util}}
-                class="grayscale mx-2 hover:grayscale-0 hover:scale-150 rounded-full h-7 w-auto sm:h-6"
-                src="../../../assets/icons/{{util}}.JPG" alt="">
-            </div>
-          </div>
-        </div>
-
         <div class="mt-4">
-          <p class="text-base font-bold text-textColorTitle">{{"characteristics"|translate}}</p>
+          <p class="text-base font-bold text-textColorTitle">
+            {{ "characteristics" | translate }}
+          </p>
           <div class="mt-4 group hover-group:scale-150">
-            <ul role="list" class="list-disc space-y-2 pl-4 text-sm ">
-              <li *ngFor="let item of data[step].characteristics">
-                <span>{{item | translate}}</span></li>
+            <ul role="list" class="list-disc space-y-2 pl-4 text-sm">
+              <li
+                *ngFor="let item of data[step].characteristics; let i = index"
+              >
+                <span>{{
+                  data[step].url + "Characteristics" + (i + 1) | translate
+                }}</span>
+              </li>
             </ul>
           </div>
         </div>

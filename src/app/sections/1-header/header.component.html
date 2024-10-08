@@ -3,13 +3,14 @@
   class="flex justify-between items-center w-full fixed z-50 bg-backgroundLabel text-textColorLabel px-4"
 >
   <a href="/">
-    <app-iconsvg class="text-textColorLabel hover:text-background" iconname="portfolio" />
+    <app-iconsvg class="text-textColorLabel hover:text-background transition duration-300 ease-in-out" iconname="portfolio" />
   </a>
   <div class="flex items-center h-full">
     <a 
       *ngFor="let palabra of link; index as i" href={{palabra.href}}
-      class="hidden sm:flex items-center py-[21px] px-2 hover:bg-textColorLabel hover:text-backgroundLabel rounded-sm" 
+      class="hidden sm:flex items-center py-[21px] px-2 hover:bg-textColorLabel hover:text-backgroundLabel rounded-sm transition duration-300 ease-in-out" 
     >
+    
       <app-iconsvg iconname={{palabra.iconname}} />
       <div>{{ palabra.translate | translate }}</div>
     </a>
@@ -30,4 +31,5 @@
       </div>
     </div>
   </div>
+
 </div>

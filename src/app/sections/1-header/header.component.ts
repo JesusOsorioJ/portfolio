@@ -10,7 +10,7 @@ export class HeaderComponent {
   p : number = 0;
   link = [
     {href: "#inicio", iconname:"home", translate: "home"},
-    {href: "#experience", iconname:"experience", translate: "experience"},
+    {href: "#experience", iconname:"experience", translate: "workExperience"},
     {href: "#proyects", iconname:"myProjects", translate: "myProjects"},
     {href: "#contact", iconname:"contact", translate: "contact"},
 

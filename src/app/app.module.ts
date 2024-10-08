@@ -15,13 +15,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
-import { FooterComponent } from './components/5-footer/footer.component';
-import { HeaderComponent } from './components/1-header/header.component';
-import { ProfileComponent } from './components/2-profile/profile.component';
-import { ExperienceComponent } from './components/3-experience/experience.component';
-import { InputComponent } from './components/4-proyects/proyects.component';
+import { FooterComponent } from './sections/5-footer/footer.component';
+import { HeaderComponent } from './sections/1-header/header.component';
+import { ProfileComponent } from './sections/2-profile/profile.component';
+import { ExperienceComponent } from './sections/3-experience/experience.component';
+import { InputComponent } from './sections/4-proyects/proyects.component';
 import { TargetComponent } from './components/target/target.component';
 import { IconsvgComponent } from './components/iconsvg/iconsvg.component';
+import { ToolsvgComponent } from './components/toolsvg/toolsvg.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -39,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProfileComponent,
     ExperienceComponent,
     TargetComponent,
-    IconsvgComponent
+    IconsvgComponent,
+    ToolsvgComponent
   ],
   imports: [
     BrowserModule,
