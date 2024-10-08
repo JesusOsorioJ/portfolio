@@ -42,7 +42,10 @@
             class="absolute top-0 h-full flex-col justify-center p-2 bg-backgroundLabel text-textColorLabel opacity-80 z-10 w-full duration-700 hidden group-hover:flex"
           >
             <p class="text-lg font-semibold">{{ date.name }}</p>
-            <p>{{ date.url + "Description" | translate }}</p>
+            <div class="h-[60px] overflow-hidden">
+              <p class="line-clamp-2">{{ date.url + "Description" | translate }}</p>
+            </div>
+            ...
             <app-target [date]="date" />
           </div>
           <img

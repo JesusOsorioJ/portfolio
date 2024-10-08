@@ -8,7 +8,6 @@
   "lightMode": "Light Mode",
   "email": "Email",
   "phone": "Phone",
-
   "theseAreMyContactPages": "These are my contact pages, in my github you can see all my projects.",
   
   "profile":"Full Stack JavaScript Developer with more than a year of experience in web application development, specialized in the MERN stack (MongoDB, Express, React, Node.js). Experienced in creating responsive frontend interfaces and implementing RESTful APIs on the backend. SQL and NoSQL database management, and familiarity with agile methodologies (SCRUM and JIRA). Chemical engineer with a background in logic and programming, using tools such as Matlab, Simulink and Wolfram.",
@@ -51,7 +50,7 @@
   "misionTICTime": "May 2021 – Dic 2021 (8 months)",
   "universityTime": "Feb 2012 – Ago 2018 (5 years)",
 
-  "quickcallDescription" : "Intermediary page between specialized professionals and clients, in domestic tasks such as electrical, plumbing, mechanics, among others.",
+  "quickcallDescription" : "Project in Reactjs (Front) and Nodejs (Back) to expose services of professionals specialized in all types of tasks such as domestic work, electrical, plumbing, mechanics, among others. Clients will be able to connect with an ideal professional according to their needs, through a user-friendly interface.",
   "quickcallCharacteristics1" : "Login with encryption (Jwt)",
   "quickcallCharacteristics2" : "Professional filter by categories",
   "quickcallCharacteristics3" : "Sending user authentication email",
@@ -66,7 +65,7 @@
   "quickcallImages5" : "Strike payment gateway",
   "quickcallImages6" : "User authentication",
 
-  "miappDescription" : "My app is a page that offers students and teachers a tool to be able to do online tests. The platform allows the management of courses and tests simultaneously.",
+  "miappDescription" : "Project carried out in Firebase (FB authentication, FB Realtime Database) for the creation and management of online courses and exams. This page offers students and teachers tools to be able to take online tests and tests simultaneously.",
   "miappCharacteristics1" : "Login with encryption (Jwt)",
   "miappCharacteristics2" : "Creation and management of online tests",
   "miappCharacteristics3" : "Creation and management of online courses",
@@ -79,8 +78,7 @@
   "miappImages5" : "Course management",
   "miappImages6" : "Subscription payment",
 
-  "makerhub": "Maker Hub (in development)",
-  "makerhubDescription" : "Page created for the management of Make It Real students' job applications",
+  "makerhubDescription" : "Project in Vite.js (Front) and Node.js (Back) for the management of job applications for Make It Real students (Bootcamp, medellin, Colombia)",
   "makerhubResponsibilities1" : "Creation of frontend view (Admin, Admindetails and Home)",
   "makerhubResponsibilities2" : "Creation of components and sub views (Login, Delete, Create and Update modal)",
   "makerhubResponsibilities3" : "Implementation of TypeScript (Interface, Type and InitialValue)",
@@ -102,7 +100,7 @@
   "makerhubImages7" : "Administration view: Maker management",
   "makerhubImages8" : "Modal to delete maker or application",
 
-  "archibigeDescription" : "Private consulting company for archives, libraries and documentation centers, aimed at providing training and advice.",
+  "archibigeDescription" : "Project in Angular.js for the creation of a file consulting company page, libraries and documentation center, aimed at providing training and advice.",
   "archibigeCharacteristics1" : "Landing page with carousel",
   "archibigeCharacteristics2" : "General information about the company",
   "archibigeCharacteristics3" : "Customer opinions carousel view",
@@ -114,7 +112,7 @@
   "archibigeImages4" : "Customer reviews in carousel",
   "archibigeImages5" : "Location with google maps",
 
-  "testenglishDescription" : "Test english is a page where you can test your English vocabulary with words from different categories.",
+  "testenglishDescription" : "Frontend/backend project made in Nextjs for the generation of a page to evaluate English vocabulary with words from different categories.",
   "testenglishCharacteristics1" : "User login and signup",
   "testenglishCharacteristics2" : "Filter words by type and grade made",
   "testenglishCharacteristics3" : "User evaluation table by word",
@@ -126,7 +124,7 @@
   "testenglishImages4" : "Word evaluation table",
   "testenglishImages5" : "List filter by grades and type of word",
 
-  "megatvDescription" : "Page to create login and small crud of TV series elements",
+  "megatvDescription" : "Project in React.js (Front) and Node.js (Back) for page with login and registration and crud of TV series elements",
   "megatvCharacteristics1" : "Form submission by clients",
   "megatvCharacteristics2" : "Upload of database addresses in client form",
   "megatvCharacteristics3" : "User evaluation table by word",
@@ -152,7 +150,7 @@
   "graphqlImages5" : "Query allname, with email of user by return",
   "graphqlImages6" : "All mutations of the program",
 
-  "dreadfulDescription" : "Page for consuming API services and filtering by product name",
+  "dreadfulDescription" : "Project in Angular.js with login and registration page for the management and consumption of third-party API services (Platzi) and filter by product name",
   "dreadfulCharacteristics1" : "Consumption of API information",
   "dreadfulCharacteristics2" : "Platzi page (https://api.escuelajs.co/api/v1/products)",
   "dreadfulCharacteristics3" : "Product pagination in lists by 8",
@@ -164,12 +162,38 @@
   "dreadfulImages5" : "Query allname, with email of user by return",
   "dreadfulImages6" : "All mutations of the program",
 
-  "crudnextDescription" : "Next. page backend/frontend creation for CRUD API creation",
-  "crudnextCharacteristics1" : "Backend/frontend in the same document",
-  "crudnextCharacteristics2" : "API consumption for deleting, creating and modifying",
-  "crudnextCharacteristics3" : "Backend for frontend information consumption",
-  "crudnextCharacteristics4" : "Styles with tailwind",
+  "crudnextDescription" : "Frontend/backend project made in Nextjs for creation of CRUD API with fields such as projects, description, price, creation date",
+  "crudnextCharacteristics1" : "API consumption for deleting, creating and modifying",
+  "crudnextCharacteristics2" : "Backend for frontend information consumption",
+  "crudnextCharacteristics3" : "Styles with tailwind",
   "crudnextImages1" : "List of created products",
   "crudnextImages2" : "Menu for adding new product",
-  "crudnextImages3" : "Menu for modify product"
+  "crudnextImages3" : "Menu for modify product",
+
+  "igmDescription" : "Vue.js (Front) and Laravel (Back) project for page creation with login, registration and notes crud with title, description, label and expiration date field",
+  "igmCharacteristics1" : "Login and user creation",
+  "igmCharacteristics2" : "Notes crud per logged in user",
+  "igmCharacteristics3" : "Endpoint testing by PhpUnit",
+  "igmCharacteristics4": "Internalization and dark/light mode",
+  "igmImages1" : "Login and user creation",
+  "igmImages2" : "Notes crud per logged in user",
+  "igmImages3" : "Note creation per user",
+
+  "quickbetDescription" : "Next Js (Front) and Nestjs (Back) project with login and registration for consumption of themoviedb api for management of favorite movies by logged in user",
+  "quickbetCharacteristics1" : "Login and user creation",
+  "quickbetCharacteristics2" : "Mark and unmark movies as favorites",
+  "quickbetCharacteristics3" : "Filters by name and genre",
+  "Quickbet Characteristics4": "Internalization and dark/light mode",
+  "quickbetCharacteristics5" : "Api consumption from https://developer.themoviedb.org/docs/getting-started ",
+  "quickbetImages1" : "Login and user creation",
+  "quickbetImages2": "Main page for favorites management",
+  "quickbetImages3" : "View movie details",
+
+  "laravelappDescription" : "Laravel (Back) project for user account crud and orders",
+  "laravelappCharacteristics1" : "Crud of user accounts and orders",
+  "laravelappCharacteristics2": "Cascading deletion of orders by deleted user",
+  "laravelappCharacteristics3" : "Edpoint testing by PhpUnit",
+  "laravelappCharacteristics4": "Documentation with Swagger and sending notification on node server by socket",
+  "laravelappImages1" : "Crud of user accounts",
+  "laravelappImages2" : "Crud of orders"
 }

@@ -13,9 +13,50 @@ export class InputComponent implements OnInit {
   valueObjet =""
   valueObjet1 =""
   myControl = new FormControl('');
-  options: string[] = ["javascript","react","node","express","typescript","graphql","angular","nextjs","nodemon","mongodb","mysql","sass",
-  "tailwind","redux","socket","sendgrid","cloudinary","stripe",
-  "reactrouter","firebase","fbauthentication","gsap","scrolltrigger"];
+  options: string[] = [
+    'JS',
+    'TS',
+    'PHP',
+
+    'react',
+    'nextjs',
+    'angular',
+    'vite',
+    'vuejs', 
+    
+    'tailwind',
+    'sass',
+    'bootstrap',
+    'gapsap',
+    'eslint',
+        
+    'vuex',
+    'redux',
+    'zustand',
+
+    'node',
+    'nestjs',
+    'laravel',
+    'express',
+    'graphql', 
+    'firebase',
+    
+    'stripe',
+    'socket',
+    'sendgrid',
+    'cloudinary',
+    'bcryptjs',
+    'swagger',
+    
+    'postgresql',
+    'prisma',
+    'mysql',
+    'mongodb', 
+
+    'jest',
+    'cypress',
+    'PHPunit',
+  ];
   filteredOptions!: Observable<string[]>;
  
   onSubmit() {
@@ -39,7 +80,7 @@ export class InputComponent implements OnInit {
   }
 
   private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+    const filterValue = value;
     this.valueObjet = filterValue
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
