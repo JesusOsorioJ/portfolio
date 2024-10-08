@@ -16,11 +16,11 @@ export class HeaderComponent {
 
   ]
   themeValue = "dark"
-  language = "en"
+  language = "es"
   
   constructor(private translate: TranslateService) {
-    const savedLanguage = localStorage.getItem('language') || 'en';
-    translate.setDefaultLang('en');
+    const savedLanguage = localStorage.getItem('language') || 'es';
+    translate.setDefaultLang('es');
     this.language = savedLanguage;
     this.translate.use(this.language); // Configura el idioma seleccionado
 

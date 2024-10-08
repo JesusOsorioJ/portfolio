@@ -20,13 +20,10 @@
 
 <div *ngIf="zoom==true" class=" fixed z-[100] w-screen h-screen flex justify-center items-center">
   <a href="details/{{data[step].url}}" class="fixed w-screen h-screen opacity-30 bg-white"></a>
-  <div class="z-[110] w-[78%] bg-backgroundLabel text-textColorLabel rounded-md">
-    <div class="flex items-center justify-between w-full p-1 px-4">
-      <div class="text-lg">{{"details" | translate}}</div>
-      <a href="details/{{data[step].url}}">
-        <app-iconsvg iconname="collapse" />
-      </a>
-    </div>
+  <div class="relative z-[110] w-[99%] sm:w-[90%] tablet lg:w-[78%] bg-backgroundLabel text-textColorLabel rounded-md">
+    <a href="details/{{data[step].url}}" class="absolute top-2 right-2 z-[120] bg-backgroundLabel">
+      <app-iconsvg iconname="collapse" />
+    </a>
     <swiper  
       [slidesPerView]="1" 
       [spaceBetween]="50" 
@@ -37,12 +34,10 @@
       class="w-full"
     >
       <ng-template *ngFor="let foto of data[step].imageswebpages, let i = index" swiperSlide>
-        <div class="picsum-img-wrapper">
-          <img src="../../../assets/photo/{{data[step].url}}/{{foto}}.png" />
-        </div>
-        <div class="carousel-caption w-full p-2 text-center font-medium rounded-b-md">
+        <div class=" w-full p-4 text-start font-medium uppercase">
           {{i+1}}. {{data[step].url+"Images"+(i+1) | translate}}
         </div>
+        <img  class="w-full" src="../../../assets/photo/{{data[step].url}}/{{foto}}.png" />
       </ng-template>
     </swiper>
   </div>
