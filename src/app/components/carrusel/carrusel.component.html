@@ -7,13 +7,13 @@
   [loop]="true" 
   [autoplay]="{delay: 3000}"
 >
-  <ng-template *ngFor="let foto of data[step].imageswebpages,let i = index" swiperSlide>
+  <ng-template *ngFor="let foto of data[step].imageswebpages;let i = index" swiperSlide>
     <div class="picsum-img-wrapper">
-      <img src="../../../assets/photo/{{data[step].url}}/{{foto.name}}.png" alt="Random first slide" />
+      <img src="../../../assets/photo/{{data[step].url}}/{{foto}}.png" alt="Random first slide" />
     </div>
     <div class="carousel-caption">
       <p class="w-auto p-1 text-base border border-gray-500 text-center font-medium z-50">
-        {{i+1}}. {{foto.des | translate}}</p>
+        {{i+1}}. {{data[step].url+"Images"+(i+1) | translate}}</p>
     </div>
   </ng-template>
 </swiper>
@@ -38,10 +38,10 @@
     >
       <ng-template *ngFor="let foto of data[step].imageswebpages, let i = index" swiperSlide>
         <div class="picsum-img-wrapper">
-          <img src="../../../assets/photo/{{data[step].url}}/{{foto.name}}.png" />
+          <img src="../../../assets/photo/{{data[step].url}}/{{foto}}.png" />
         </div>
         <div class="carousel-caption w-full p-2 text-center font-medium rounded-b-md">
-          {{i+1}}. {{foto.des | translate}}
+          {{i+1}}. {{data[step].url+"Images"+(i+1) | translate}}
         </div>
       </ng-template>
     </swiper>

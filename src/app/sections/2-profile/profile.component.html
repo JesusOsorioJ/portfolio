@@ -1,0 +1,44 @@
+<main class="flex justify-center py-40 px-10 w-full gap-20">
+  <div class="flex flex-col w-full">
+    <p class="text-4xl font-bold">Jesus Osorio Jimenez</p>
+    <p class="text-xl font-bold text-textColorTitle">Full Stack JavaScript</p>
+    <p class="justify-content">{{ "profile" | translate }}</p>
+    <div
+      class="mt-10 flex items-center justify-center gap-6 text-white uppercase font-semibold"
+    >
+      <a
+        href="#experience"
+        class="flex items-center gap-1 px-5 h-11 rounded-md bg-indigo-400 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      >
+        <app-iconsvg iconname="experience" />
+        <div class="flex items-center">{{ "workExperience" | translate }}</div>
+      </a>
+      <a
+        href="#contact"
+        class="flex items-center gap-1 px-5 h-11 rounded-md bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      >
+        <app-iconsvg iconname="contact" />
+        <div class="flex items-center">{{ "contact" | translate }}</div>
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col w-full gap-2">
+    <div
+      *ngFor="let item of items; index as i"
+      class="flex flex-col items-start"
+    >
+      <p class="pr-1 mb-0 text-lg text-textColorTitle">{{ item.name }}</p>
+      <div class="flex gap-2 flex-wrap items-center">
+        <div
+          *ngFor="let util of item.items"
+          class="flex flex-col items-center group grayscale hover:grayscale-0 hover:scale-125 transition duration-600 ease-in-out"
+        >
+          <app-toolsvg iconname="{{ util }}" size="31px" />
+          <p class="text-xs text-transparent group-hover:text-textColor capitalize break-works max-w-[40px]">
+            {{ util }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

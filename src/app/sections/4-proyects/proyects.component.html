@@ -1,0 +1,60 @@
+<div id="proyects">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl py-10 sm:py-10 lg:max-w-none lg:py-10">
+      <p class="text-4xl">{{ "myProjects" | translate }}</p>
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>{{ "filter" | translate }}</mat-label>
+          <input
+            type="text"
+            [attr.placeholder]="'filter' | translate"
+            aria-label="Herramientas"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+            (keydown.enter)="onSubmit()"
+          />
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option
+              *ngFor="let option of filteredOptions | async"
+              [value]="option"
+              on
+            >
+              {{ option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      <div *ngIf="data.length < 5" class="text-small">
+        {{ "filteredBy" | translate }} {{ valueObjet1 }}
+      </div>
+      <div
+        id="target1"
+        class="mt-6 flex flex-wrap justify-around gap-6"
+      >
+        <a
+          id="target"
+          *ngFor="let date of data"
+          href="details/{{ date.url }}"
+          class="relative items-end overflow-hidden group block w-80 h-60  rounded-md hover:scale-110 transition duration-300 ease-in-out"
+        >
+          <div
+            class="absolute top-0 h-full flex-col justify-center p-2 bg-backgroundLabel text-textColorLabel opacity-80 z-10 w-full duration-700 hidden group-hover:flex"
+          >
+            <p class="text-lg font-semibold">{{ date.name }}</p>
+            <p>{{ date.url + "Description" | translate }}</p>
+            <app-target [date]="date" />
+          </div>
+          <img
+            id="target"
+            class="blur-lg h-full bg-auto bg-no-repeat bg-center"
+            src="../../../assets/photo/{{ date.url }}/{{
+              date.imageswebpages[0]
+            }}.png"
+            style="filter: opacity(100%)"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

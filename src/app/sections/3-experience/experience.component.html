@@ -1,0 +1,68 @@
+<main id="experience" class="flex flex-col lg:flex-row pb-40 px-10 gap-20  ">
+  <div class="flex flex-col item-center w-full">
+    <div class="text-4xl py-2">{{ "workExperience" | translate}}  </div>
+    <div class="text-lg font-bold text-textColorTitle">Full Stack JavaScript</div>
+    <div class="font-bold">Disruptive Studio, Guadalajara, Mexico</div>
+    <div>{{ "disruptiveTime" | translate }}</div>
+    <div class="py-2 flex flex-col gap-3">
+      <div>
+        <div class="font-bold">{{ "responsibilities" | translate}}:</div>
+        <div class="pl-2">{{ "disruptiveResponsibilities1" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveResponsibilities2" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveResponsibilities3" | translate}}  </div>
+      </div>
+      <div>
+        <div class="font-bold">{{ "importantAchievements" | translate}}:</div>
+        <div class="pl-2">{{ "disruptiveAchievements1" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveAchievements2" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveAchievements3" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveAchievements4" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveAchievements5" | translate}}  </div>
+        <div class="pl-2">{{ "disruptiveAchievements6" | translate}}  </div>
+      </div>
+      <div class="flex item-center gap-1">
+        <div class="font-bold">{{ "technologies" | translate}}: </div>
+        <div>JavaScript, Typescript, Node.js, Next.js, Vite, AWS, Prisma, PostgreSQL, Docker, Socket.io, MongoDB (Mongoose), JSDoc, React Hook Form.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col item-center w-full">
+    <div class="text-4xl py-2">{{ "academicTraining" | translate}}</div>
+    <div class="flex flex-col gap-4">
+      <div>
+        <div class="text-lg font-bold text-textColorTitle">• Full Stack JavaScript</div>
+        <div class="font-bold">Make it real, Medellín, Colombia.</div>
+        <div>{{ "makeItRealTime" | translate }}</div>
+        <div>{{ "makeItRealDescription" | translate }}</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-textColorTitle">• Web developer</div>
+        <div class="font-bold">MisionTIC 2022, Universidad del norte, Barranquilla, Colombia.</div>
+        <div>{{ "misionTICTime" | translate }}</div>
+        <div>{{ "misionTICDescription" | translate }}</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-textColorTitle">• {{"chemicalEngineer" | translate}}</div>
+        <div class="font-bold">Universidad de Cartagena, Cartagena, Colombia.</div>
+        <div>{{ "universityTime" | translate }}</div>
+        <div>{{"researchGroup" | translate}}</div>
+      </div>
+
+      <div class="mt-10 flex items-center justify-center gap-6 text-white font-semibold">
+        <button (click)="downloadPDF('es')" class="flex gap-1 px-5 h-11 items-center justify-center rounded-md bg-indigo-400  hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+      <app-iconsvg iconname="download" />
+          
+          {{ "downloadResumeSpanish" | translate}}
+        </button>
+        <button (click)="downloadPDF('en')" class="flex gap-1 px-5 h-11 items-center justify-center rounded-md bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+      <app-iconsvg iconname="download" />
+         
+          {{ "downloadResumeEnglish" | translate}}
+        </button>
+      </div>
+  </div>
+  </div>
+</main>
+
+
