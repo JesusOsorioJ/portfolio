@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -9,6 +9,7 @@ import { databases } from '../../pages/details/database'
   templateUrl: './proyects.component.html'
 })
 export class InputComponent implements OnInit {
+  // @ViewChildren('proyecttarget') proyecttarget!: QueryList<ElementRef>;
   data = databases
   valueObjet =""
   valueObjet1 =""
@@ -77,6 +78,20 @@ export class InputComponent implements OnInit {
       startWith(''),
       map(value => this._filter(value || '')),
     );
+
+    // this.proyecttarget.forEach((box:any) => {
+    //   const scrollBox = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: box,
+    //       pin: true,
+    //       start: "medium top",
+    //       end: "bottom bottom",
+    //       markers: true,
+    //       toggleActions: "play none none reverse"
+    //     }
+    //   });
+    //   scrollBox.from(box, { duration: 1, opacity: 0 });
+    // });
   }
 
   private _filter(value: string): string[] {

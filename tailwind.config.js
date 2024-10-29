@@ -12,6 +12,9 @@ module.exports = {
         textColorLabel : 'var(--text-colorLabel)',
         textColor: 'var(--text-color)',
         textColorTitle: 'var(--text-colorTitle)',
+      },
+      boxShadow: {
+        'target': '0px 2px 6px rgba(0, 0, 0, 0.1)',
       }
     },
   },

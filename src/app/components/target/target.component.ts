@@ -1,9 +1,19 @@
-import { Component,Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-target',
-  templateUrl: './target.component.html'
+  templateUrl: './target.component.html',
 })
 export class TargetComponent {
-  @Input() date = {technologies:{front:[""],back:[""],database:[""],test:[""]}};
+  @Input() date = {
+    url: '',
+    name: '', 
+    imageswebpages: [''],
+    technologies: {
+      front: [''],
+      back: [''],
+      database: [''],
+      test: [''],
+    },
+  };
 }

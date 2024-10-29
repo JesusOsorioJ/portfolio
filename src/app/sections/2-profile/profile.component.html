@@ -1,4 +1,4 @@
-<main class="flex flex-col lg:flex-row justify-center py-40 px-10 w-full gap-20">
+<main class="flex flex-col lg:flex-row justify-center py-40 px-10 w-full gap-20 min-h-screen">
   <div class="flex flex-col w-full">
     <p class="text-4xl font-bold">Jesus Osorio Jimenez</p>
     <p class="text-xl font-bold text-textColorTitle">Full Stack JavaScript</p>
@@ -31,9 +31,10 @@
       <div class="flex gap-2 flex-wrap items-center">
         <div
           *ngFor="let util of item.items"
-          class="flex flex-col items-center group grayscale hover:grayscale-0 hover:scale-125 transition duration-600 ease-in-out"
+          class="flex flex-col items-center group transition duration-600 ease-in-out"
+          #profiletool     
         >
-          <app-toolsvg iconname="{{ util }}" size="31px" />
+          <app-toolsvg iconname="{{ util }}" size="31px" class="grayscale group-hover:grayscale-0 group-hover:scale-125"/>
           <p class="text-xs text-transparent group-hover:text-textColor capitalize break-works max-w-[40px]">
             {{ util }}
           </p>

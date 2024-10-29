@@ -1,27 +1,39 @@
-<div class="flex flex-row flex-wrap">
-  <div *ngIf="date.technologies.front[0]!.length!=0" class="mx-1 mt-2 flex flex-col gap-1 border-r border-gray-600">
-    <div>Front</div>
-    <div class="flex">
-      <app-toolsvg *ngFor="let i of [0,1]" class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.front[i] }}" size="30px" />
-    </div>
-  </div>
-  <div *ngIf="date.technologies.back[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
-    <div>Back</div>
-    <div class="flex">
-      <app-toolsvg *ngFor="let i of [0,1]" class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.back[i] }}" size="30px" />
+<a
+  id="contactobtn"
+  href="details/{{ date.url }}"
+  class="items-end shadow-target shadow-textColorLabel overflow-hidden block rounded-md"
+>
+  <div class="bg-background p-2 uppercase">{{ date.name }}</div>
+  <div class="relative group transition duration-300 ease-in-out w-80 h-40">
+    <img
+      class="blur-lg h-full bg-auto bg-no-repeat bg-center"
+      src="../../../assets/photo/{{ date.url }}/{{
+        date.imageswebpages[0]
+      }}.png"
+      style="filter: opacity(100%)"
+    />
+    <div
+      class="absolute top-0 h-full flex-col justify-center p-2 bg-backgroundLabel text-textColorLabel opacity-80 z-10 w-full duration-700 hidden group-hover:flex"
+    >
+      <div class="h-[60px] overflow-hidden">
+        <p class="line-clamp-2">{{ date.url + "Description" | translate }}</p>
+      </div>
+      ...
     </div>
   </div>
 
-  <div *ngIf="date.technologies.database[0]!.length!=0" class="mx-1 mt-2 flex flex-col border-r border-gray-600">
-    <div>DB</div>
-    <div class="flex">
-      <app-toolsvg class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.database[0] }}" size="30px" />
+  <div class="flex gap-1 flex-wrap bg-background p-2">
+    <div *ngIf="date.technologies.front[0]!.length != 0" class="p-2 border rounded-md capitalize">
+        {{ date.technologies.front[0] }}
+    </div>
+    <div *ngIf="date.technologies.back[0]!.length != 0" class="p-2 border rounded-md capitalize">
+        {{ date.technologies.back[0] }}
+    </div>
+    <div *ngIf="date.technologies.database[0]!.length != 0" class="p-2 border rounded-md capitalize">
+        {{ date.technologies.database[0] }}
+    </div>
+    <div *ngIf="date.technologies.test[0]!.length != 0" class="p-2 border rounded-md capitalize">
+        {{ date.technologies.test[0] }}
     </div>
   </div>
-  <div *ngIf="date.technologies.test[0]!.length!=0" class="mx-1 mt-2 flex flex-col ">
-    <div>Test</div>
-    <div class="flex">
-      <app-toolsvg class="grayscale mr-2 hover:grayscale-0 transition duration-600 ease-in-out" iconname="{{ date.technologies.test[0] }}" size="30px" />
-    </div>
-  </div>
-</div>
+</a>
