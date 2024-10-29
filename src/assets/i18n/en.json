@@ -1,9 +1,9 @@
 {
   "home": "Home",
   "contact": "Contact",
-  "downloadResumeEnglish": "Download CV in english",
-  "downloadResumeSpanish": "Download CV in spanish",
-  "myProjects": "My projects",
+  "downloadResumeEnglish": "Download CV EN",
+  "downloadResumeSpanish": "Download CV ES",
+  "myProjects": "Projects",
   "darkMode": "Dark Mode",
   "lightMode": "Light Mode",
   "email": "Email",
@@ -11,7 +11,7 @@
   "theseAreMyContactPages": "These are my contact pages, in my github you can see all my projects.",
   
   "profile":"Full Stack JavaScript Developer with more than a year of experience in web application development, specialized in the MERN stack (MongoDB, Express, React, Node.js). Experienced in creating responsive frontend interfaces and implementing RESTful APIs on the backend. SQL and NoSQL database management, and familiarity with agile methodologies (SCRUM and JIRA). Chemical engineer with a background in logic and programming, using tools such as Matlab, Simulink and Wolfram.",
-  "workExperience": "Work experience",
+  "workExperience": "Experience",
   "description": "Description",
   "responsibilities": "Responsibilities",
   "technologies": "Technologies",

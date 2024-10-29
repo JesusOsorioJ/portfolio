@@ -14,7 +14,7 @@ module.exports = {
         textColorTitle: 'var(--text-colorTitle)',
       },
       boxShadow: {
-        'target': '0px 2px 6px rgba(0, 0, 0, 0.1)',
+        'target': '0px 1px 5px rgba(0, 0, 0, 0.1)',
       }
     },
   },

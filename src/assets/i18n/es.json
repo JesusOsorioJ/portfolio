@@ -1,9 +1,9 @@
 {
   "home": "Inicio",
   "contact": "Contacto",
-  "downloadResumeEnglish": "Descargar CV en inglés",
-  "downloadResumeSpanish": "Descargar CV en español",
-  "myProjects": "Mis proyectos",
+  "downloadResumeEnglish": "Descargar CV EN",
+  "downloadResumeSpanish": "Descargar CV ES",
+  "myProjects": "Proyectos",
   "darkMode": "Modo Oscuro",
   "lightMode": "Modo Claro",
   "email": "Correo",
@@ -11,7 +11,7 @@
   "theseAreMyContactPages": "Estas son mis páginas de contacto, en mi github podrás ver todos mis proyectos.",
   
   "profile":"Desarrollador Full Stack JavaScript con más de un año de experiencia en el desarrollo de aplicaciones web, especializado en el stack MERN (MongoDB, Express, React, Node.js). Con experiencia en la creación de interfaces frontend responsivas y la implementación de APIs RESTful en el backend. Manejo de bases de datos SQL y NoSQL, y familiaridad con metodologías ágiles (SCRUM y JIRA). Ingeniero químico con formación en lógica y programación, utilizando herramientas como Matlab, Simulink y Wolfram. ",
-  "workExperience": "Experiencia laboral",
+  "workExperience": "Experiencia",
   "description": "Descripción",
   "responsibilities": "Responsabilidades",
   "technologies": "Tecnologías",
