@@ -63,7 +63,7 @@ export var databases = [
     participants: [
       {
         rol: 'developer',
-        name: 'Jesus Osorio jimenez',
+        name: 'Jesus Osorio Jimenez',
         linkedin: 'https://www.linkedin.com/in/jesus-david-osorio-jimenez/',
       },
     ],
