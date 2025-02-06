@@ -198,5 +198,42 @@
   "laravelappCharacteristics3" : "Testing de edpoint por PhpUnit",
   "laravelappCharacteristics4": "Documentación con Swagger y envío notificación en servidor de node por socket",
   "laravelappImages1" : "Crud de cuentas de usuario",
-  "laravelappImages2" : "Crud de pedidos"
+  "laravelappImages2" : "Crud de pedidos",
+
+  "nexttasksystemDescription": "Aplicación diseñada para gestionar tareas internas, facilitando la organización del trabajo y el seguimiento del progreso de las tareas asignadas. Los administradores pueden asignar y gestionar tareas, mientras que los empleados pueden visualizar y actualizar el estado de su trabajo asignado.",
+  "nexttasksystemCharacteristics1": "Registro, inicio de sesión y autenticación de usuarios.",
+  "nexttasksystemCharacteristics2": "Creación, actualización y eliminación de tareas.",
+  "nexttasksystemCharacteristics3": "Uso de WebSockets para sincronización en tiempo real.",
+  "nexttasksystemCharacteristics4": "Validaciones en el backend usando express-validator.",
+  "nexttasksystemCharacteristics5": "Manejo de contraseñas con bcrypt y autenticación con JWT.",
+  "nexttasksystemImages1": "CRUD de tareas (frontend).",
+  "nexttasksystemImages2": "Login y registro de cuentas de usuario.",
+  "nexttasksystemImages3": "CRUD de tareas (REST client).",
+  "nexttasksystemImages4": "CRUD de usuarios (REST client).",
+  "nexttasksystemImages5": "Tests con Jest.",
+
+  "evalartDescription": "Este proyecto es una API que permite gestionar franquicias y sus sucursales utilizando MongoDB como base de datos y Spring Boot como framework backend. Se incluyen operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para manejar franquicias y sucursales asociadas.",
+  "evalartCharacteristics1": "Gestión de franquicias.",
+  "evalartCharacteristics2": "Operaciones CRUD para sucursales asociadas a una franquicia.",
+  "evalartCharacteristics3": "Persistencia de datos con MongoDB.",
+  "evalartCharacteristics4": "Arquitectura RESTful para las operaciones.",
+  "evalartImages1": "Ejecución del proyecto con mvn spring-boot:run (terminal).",
+  "evalartImages2": "Consumo de endpoint con REST client (CRUD sucursales).",
+
+  "runaDescription": "Aplicación que permite recibir y procesar transacciones en criptomonedas de manera segura.",
+  "runaCharacteristics1": "Verificación de transacciones en criptomonedas.",
+  "runaCharacteristics2": "Validaciones para evitar transacciones duplicadas y conflictos de billetera.",
+  "runaCharacteristics3": "Arquitectura basada en Docker para facilitar el despliegue y administración.",
+  "runaCharacteristics4": "Maquetación en Vite + React + Tailwind.",
+  "runaImages1": "Creación de contenedor en Docker y ejecución de app.js (terminal).",
+  "runaImages2": "Creación de contenedor en Docker y ejecución de app.js (Docker).",
+  "runaImages3": "Maquetación en Vite + React + Tailwind.",
+
+  "pocketDescription": "Este proyecto es una aplicación de chat interactiva desarrollada con React, TypeScript y Socket.IO. Proporciona un chat entre usuarios y un bot, con integración a un backend construido en Node.js y Express.",
+  "pocketCharacteristics1": "Consumo de API de chatbot (IA) para responder a usuarios.",
+  "pocketCharacteristics2": "Manejo de internacionalización y temas claro/oscuro.",
+  "pocketCharacteristics3": "Uso de WebSockets para sincronización en tiempo real.",
+  "pocketImages1": "Chat interactivo del chatbot (IA).",
+  "pocketImages2": "Eliminar chat.",
+  "pocketImages3": "Manejo de internacionalización y temas claro/oscuro."
 }

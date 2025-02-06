@@ -440,6 +440,127 @@ export var databases = [
     ],
     videopage: null,
   },
+  {
+    no: 12,
+    name: 'Next task system',
+    url: 'nexttasksystem',
+    participants: [
+      {
+        rol: 'developer',
+        name: 'Jesus Osorio Jimenez',
+        linkedin: 'https://www.linkedin.com/in/jesus-david-osorio-jimenez/',
+      },
+    ],
+    responsibilities: [],
+    technologies: {
+      all: ['nextjs', 'socket', 'TS', 'mysql','prisma', 'jest'],
+      front: ['nextjs', 'socket'],
+      back: ['TS'],
+      database: ['mysql', 'prisma'],
+      test: ['jest'],
+    },
+    characteristics: Array(5).fill(''),
+    frontend: 'https://github.com/JesusOsorioJ/nextjs-task-system/tree/trunk/nextjs-task-system',
+    backend: null,
+    webpage: null,
+    imageswebpages: [
+      'taskfront',
+      'login',
+      'task',
+      'user',
+      'test',
+    ],
+    videopage: null,
+  },
+  {
+    no: 13,
+    name: 'Evalart',
+    url: 'evalart',
+    participants: [
+      {
+        rol: 'developer',
+        name: 'Jesus Osorio Jimenez',
+        linkedin: 'https://www.linkedin.com/in/jesus-david-osorio-jimenez/',
+      },
+    ],
+    responsibilities: [],
+    technologies: {
+      all: ['java', 'maven', 'swagger','mysql', 'mongodb',''],
+      front: [''],
+      back: ['java', 'maven', 'swagger'  ],
+      database: ['mongodb'],
+      test: [''],
+    },
+    characteristics: Array(4).fill(''),
+    frontend: null,
+    backend: 'https://github.com/JesusOsorioJ/evalart',
+    webpage: null,
+    imageswebpages: [
+      'terminal',
+      'crud'
+    ],
+    videopage: null,
+  },
+  {
+    no: 14,
+    name: 'Runa',
+    url: 'runa',
+    participants: [
+      {
+        rol: 'developer',
+        name: 'Jesus Osorio Jimenez',
+        linkedin: 'https://www.linkedin.com/in/jesus-david-osorio-jimenez/',
+      },
+    ],
+    responsibilities: [],
+    technologies: {
+      all: ['vite', 'TS', 'tailwind', 'JS','node', 'docker','postgresql'],
+      front: ['vite', 'TS', 'tailwind'],
+      back: ['JS', 'node','docker'],
+      database: ['postgresql'],
+      test: [''],
+    },
+    characteristics: Array(4).fill(''),
+    frontend: 'https://github.com/JesusOsorioJ/runa',
+    backend: 'https://github.com/JesusOsorioJ/runa',
+    webpage: null,
+    imageswebpages: [
+      'terminal',
+      'docker',
+      'maquetacion'
+    ],
+    videopage: null,
+  },
+  {
+    no: 15,
+    name: 'Pocket',
+    url: 'pocket',
+    participants: [
+      {
+        rol: 'developer',
+        name: 'Jesus Osorio Jimenez',
+        linkedin: 'https://www.linkedin.com/in/jesus-david-osorio-jimenez/',
+      },
+    ],
+    responsibilities: [],
+    technologies: {
+      all: ['react', 'TS', 'tailwind', 'i18next','node', 'express','swagger', 'prisma'],
+      front: ['react', 'TS', 'tailwind', 'i18next', 'socket' ],
+      back: ['node','express', 'swagger'],
+      database: ['prisma'],
+      test: [''],
+    },
+    characteristics: Array(3).fill(''),
+    frontend: 'https://github.com/JesusOsorioJ/pocket',
+    backend: 'https://github.com/JesusOsorioJ/pocket',
+    webpage: 'https://pocket-indol.vercel.app/',
+    imageswebpages: [
+      'chatbot',
+      'eliminar',
+      'temas'
+    ],
+    videopage: null,
+  },
 ];
 
 export var technologies = [
@@ -474,6 +595,7 @@ export var technologies = [
       'graphql',
       'nodemon',
       'eslint',
+      'express-validator'
     ],
   },
   {

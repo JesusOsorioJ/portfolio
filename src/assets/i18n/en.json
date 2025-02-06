@@ -198,5 +198,42 @@
   "laravelappCharacteristics3" : "Edpoint testing by PhpUnit",
   "laravelappCharacteristics4": "Documentation with Swagger and sending notification on node server by socket",
   "laravelappImages1" : "Crud of user accounts",
-  "laravelappImages2" : "Crud of orders"
+  "laravelappImages2" : "Crud of orders",
+
+  "nexttasksystemDescription": "Application designed to manage internal tasks, facilitating work organization and tracking the progress of assigned tasks. Administrators can assign and manage tasks, while employees can view and update the status of their assigned work.",
+  "nexttasksystemCharacteristics1": "User registration, login, and authentication.",
+  "nexttasksystemCharacteristics2": "Task creation, updating, and deletion.",
+  "nexttasksystemCharacteristics3": "Real-time synchronization using WebSockets.",
+  "nexttasksystemCharacteristics4": "Backend validations using express-validator.",
+  "nexttasksystemCharacteristics5": "Password handling with bcrypt and authentication with JWT.",
+  "nexttasksystemImages1": "Task CRUD (frontend).",
+  "nexttasksystemImages2": "User account login and registration.",
+  "nexttasksystemImages3": "Task CRUD (REST client).",
+  "nexttasksystemImages4": "User CRUD (REST client).",
+  "nexttasksystemImages5": "Tests with Jest.",
+
+  "evalartDescription": "This project is an API that manages franchises and their branches using MongoDB as the database and Spring Boot as the backend framework. It includes CRUD operations (Create, Read, Update, Delete) for handling franchises and their associated branches.",
+  "evalartCharacteristics1": "Franchise management.",
+  "evalartCharacteristics2": "CRUD operations for branches associated with a franchise.",
+  "evalartCharacteristics3": "Data persistence with MongoDB.",
+  "evalartCharacteristics4": "RESTful architecture for operations.",
+  "evalartImages1": "Project execution with mvn spring-boot:run (terminal).",
+  "evalartImages2": "Endpoint consumption with REST client (branch CRUD).",
+
+  "runaDescription": "Application that securely receives and processes cryptocurrency transactions.",
+  "runaCharacteristics1": "Verification of cryptocurrency transactions.",
+  "runaCharacteristics2": "Validations to prevent duplicate transactions and wallet conflicts.",
+  "runaCharacteristics3": "Docker-based architecture for easier deployment and management.",
+  "runaCharacteristics4": "Layout built with Vite + React + Tailwind.",
+  "runaImages1": "Docker container creation and app.js execution (terminal).",
+  "runaImages2": "Docker container creation and app.js execution (Docker).",
+  "runaImages3": "Layout with Vite + React + Tailwind.",
+
+  "pocketDescription": "This project is an interactive chat application developed with React, TypeScript, and Socket.IO. It provides chat functionality between users and a bot, integrated with a backend built with Node.js and Express.",
+  "pocketCharacteristics1": "Chatbot API (AI) consumption for user responses.",
+  "pocketCharacteristics2": "Handling of internationalization and light/dark themes.",
+  "pocketCharacteristics3": "Real-time synchronization using WebSockets.",
+  "pocketImages1": "Interactive chatbot (AI) chat.",
+  "pocketImages2": "Delete chat.",
+  "pocketImages3": "Internationalization handling and light/dark themes."
 }
