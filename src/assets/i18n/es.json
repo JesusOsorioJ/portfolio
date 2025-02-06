@@ -20,6 +20,9 @@
   "filteredBy": "Filtrado por",
   "filter": "Filtrar",
   "importantAchievements": "Logros destacados",
+  "page": "Pagina: ",
+  "previous": "Anterior",
+  "next": "Proxima",
 
   "disruptiveTime": "Abr 2023 – Ago 2024 (1 año y 5 meses)",
   "disruptiveResponsibilities1": " •  Desarrollo frontend de interfaces de usuario responsivas con React.js, Next.js y Vite.js, optimizando la experiencia en dispositivos móviles y escritorio.",

@@ -31,9 +31,13 @@
       <div
         id="target1"
         class="mt-6 flex flex-wrap justify-around gap-6"
-       
       >
-        <app-target *ngFor="let date of data" [date]="date" #proyecttarget />
+        <app-target *ngFor="let date of paginatedData" [date]="date" #proyecttarget />
+      </div>
+      <div class="flex justify-center mt-8 items-center">
+        <button class="p-2 border rounded-md capitalize hover:scale-105 disabled:opacity-50 disabled:scale-100" mat-button (click)="prevPage()" [disabled]="currentPage === 1">{{ "previous" | translate }}</button>
+        <span class="mx-4"> {{ "page" | translate }} {{ currentPage }} / {{ totalPages }}</span>
+        <button class="p-2 border rounded-md capitalize hover:scale-105 disabled:opacity-50 disabled:scale-100" mat-button (click)="nextPage()" [disabled]="currentPage === totalPages">{{ "next" | translate }}</button>
       </div>
     </div>
   </div>
