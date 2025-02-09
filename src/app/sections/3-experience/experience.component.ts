@@ -18,7 +18,7 @@ export class ExperienceComponent {
       link.href = 'assets/cv/CV_ES.pdf';
 
     }
-    link.download = 'MyCV.pdf';
+    link.download = 'CV.pdf';
     link.click();
   }
 
